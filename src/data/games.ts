@@ -3,7 +3,7 @@ import { Game } from '../lib/types';
 export const GAMES: Game[] = [
   // ─── GRUPO A ───────────────────────────────────────────────
   { id: 'A1', group: 'A', round: 1, homeTeamId: 'mexico',       awayTeamId: 'south-africa', date: '2026-06-11' },
-  { id: 'A2', group: 'A', round: 1, homeTeamId: 'south-korea',  awayTeamId: 'czechia',      date: '2026-06-12' },
+  { id: 'A2', group: 'A', round: 1, homeTeamId: 'south-korea',  awayTeamId: 'czechia',      date: '2026-06-11' },
   { id: 'A3', group: 'A', round: 2, homeTeamId: 'czechia',      awayTeamId: 'south-africa', date: '2026-06-18' },
   { id: 'A4', group: 'A', round: 2, homeTeamId: 'mexico',       awayTeamId: 'south-korea',  date: '2026-06-18' },
   { id: 'A5', group: 'A', round: 3, homeTeamId: 'czechia',      awayTeamId: 'mexico',       date: '2026-06-24' },
