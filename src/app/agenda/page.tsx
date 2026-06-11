@@ -33,7 +33,7 @@ export default function AgendaPage() {
       </div>
 
       <div className="max-w-lg mx-auto px-4 pt-4 space-y-6">
-        {Array.from(byDate.entries()).map(([date, games]) => {
+        {Array.from(byDate.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([date, games]) => {
           const { label } = parseDate(date);
           const allPlayed = games.every((g) => g.id in RESULTS);
 
