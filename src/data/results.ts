@@ -11,7 +11,5 @@ import { GameResult } from '../lib/types';
  *   'C1': { home: 2, away: 0 },  // Brasil 2 x 0 Marrocos
  */
 export const RESULTS: Record<string, GameResult> = {
-  // ─── Coloque os resultados aqui à medida que os jogos acontecem ───
-  // 'A1': { home: 0, away: 0 },
-  // 'C1': { home: 2, away: 0 },
+  'A1': { home: 2, away: 0 }, // México 2×0 África do Sul
 };
