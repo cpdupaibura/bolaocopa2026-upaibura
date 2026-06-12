@@ -13,4 +13,5 @@ import { GameResult } from '../lib/types';
 export const RESULTS: Record<string, GameResult> = {
   'A1': { home: 2, away: 0 }, // México 2×0 África do Sul
   'A2': { home: 2, away: 1 }, // Coreia do Sul 2×1 Rep. Tcheca
+  'B1': { home: 1, away: 1 }, // Canadá 1×1 Bósnia
 };
