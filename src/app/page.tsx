@@ -7,6 +7,7 @@ import { TEAMS } from '@/data/teams';
 import { calculateLeaderboard, displayName } from '@/lib/scoring';
 import { Group, ParticipantScore } from '@/lib/types';
 import AvatarImg from '@/components/AvatarImg';
+import ExportRanking from '@/components/ExportRanking';
 
 const ALL_GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 const MEDALS = ['🥇', '🥈', '🥉'];
@@ -136,9 +137,12 @@ export default function Home() {
       <div className="max-w-lg mx-auto px-4">
         {/* ── Leaderboard ── */}
         <section className="py-6">
-          <h2 className="text-amber-400 font-bold text-xs tracking-widest uppercase mb-4">
-            🏆 Classificação
-          </h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-amber-400 font-bold text-xs tracking-widest uppercase">
+              🏆 Classificação
+            </h2>
+            <ExportRanking leaderboard={leaderboard} />
+          </div>
           {leaderboard.length === 0 ? (
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 text-center text-slate-500 text-sm">
               Apostas ainda não cadastradas
