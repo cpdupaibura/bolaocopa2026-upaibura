@@ -6,6 +6,7 @@ import { GAMES_BY_GROUP } from '@/data/games';
 import { TEAMS } from '@/data/teams';
 import { calculateLeaderboard, displayName } from '@/lib/scoring';
 import { Group, ParticipantScore } from '@/lib/types';
+import AvatarImg from '@/components/AvatarImg';
 
 const ALL_GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 const MEDALS = ['🥇', '🥈', '🥉'];
@@ -32,18 +33,25 @@ function LeaderboardRow({
       }`}
     >
       <div className="flex items-center gap-3">
-        <span className="text-slate-500 font-bold w-5 text-sm text-right">{rank}</span>
-        <span className="text-xl w-6 text-center">{medal ?? ''}</span>
+        <span className="text-slate-500 font-bold w-5 text-sm text-right shrink-0">{rank}</span>
+        <AvatarImg
+          id={entry.participant.id}
+          name={entry.participant.name}
+          avatarFile={entry.participant.avatarFile}
+          size={44}
+          ring={isTop}
+        />
         <span className="font-bold text-white flex-1 text-base min-w-0">
-            <span className="block truncate">{entry.participant.name}</span>
-            {entry.participant.label && (
-              <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide">
-                {entry.participant.label}
-              </span>
-            )}
-          </span>
+          <span className="block truncate">{entry.participant.name}</span>
+          {entry.participant.label && (
+            <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide">
+              {entry.participant.label}
+            </span>
+          )}
+        </span>
+        {medal && <span className="text-xl shrink-0">{medal}</span>}
         <span
-          className={`font-extrabold text-lg tabular-nums ${
+          className={`font-extrabold text-lg tabular-nums shrink-0 ${
             isTop ? 'text-amber-400' : 'text-slate-200'
           }`}
         >
@@ -52,7 +60,7 @@ function LeaderboardRow({
         </span>
       </div>
 
-      <div className="mt-2 ml-14 h-1 bg-slate-800 rounded-full overflow-hidden">
+      <div className="mt-2 ml-22 h-1 bg-slate-800 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full transition-all ${
             isTop ? 'bg-amber-400' : 'bg-emerald-600'
@@ -62,7 +70,7 @@ function LeaderboardRow({
       </div>
 
       {(entry.simpleCorrect > 0 || entry.advancedCorrect > 0 || entry.gamesWithBets > 0) && (
-        <div className="mt-1.5 ml-14 flex gap-3 text-xs text-slate-500">
+        <div className="mt-1.5 ml-22 flex gap-3 text-xs text-slate-500">
           {entry.simpleCorrect > 0 && (
             <span className="text-emerald-500">{entry.simpleCorrect} simples ✓</span>
           )}

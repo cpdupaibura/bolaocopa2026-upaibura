@@ -21,6 +21,7 @@ export interface Participant {
   name: string;
   label?: string;   // "Aposta 1", "Aposta 2" — para quem fez múltiplas fichas
   pdfFile?: string;
+  avatarFile?: string;
 }
 
 export type BetOutcome = 'home' | 'away' | 'draw';
