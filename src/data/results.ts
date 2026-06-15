@@ -22,4 +22,5 @@ export const RESULTS: Record<string, GameResult> = {
   'E1': { home: 7, away: 1 }, // Alemanha 7×1 Curaçao
   'F1': { home: 2, away: 2 }, // Holanda 2×2 Japão
   'E2': { home: 1, away: 0 }, // Costa do Marfim 1×0 Equador
+  'F2': { home: 5, away: 1 }, // Suécia 5×1 Tunísia
 };
