@@ -8,7 +8,6 @@ const MEDALS: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' };
 const G4 = 4;
 const Z4 = 4;
 
-/** Standard competition ranking: tied points → same rank (1,2,3,3,5...) */
 function computeRanks(lb: ParticipantScore[]): number[] {
   return lb.map((entry) => lb.filter((e) => e.points > entry.points).length + 1);
 }
@@ -36,12 +35,10 @@ function InitialsBadge({ id, name, size, gold }: { id: string; name: string; siz
 function RankRow({ rank, entry, zone }: { rank: number; entry: ParticipantScore; zone: 'gold' | 'normal' | 'danger' }) {
   const p = entry.participant;
   const label = p.label ? `${p.name} (${p.label})` : p.name;
-
-  const rowBg   = zone === 'gold' ? '#1a2e1a' : zone === 'danger' ? '#2a1010' : '#0f172a';
-  const numCol  = zone === 'gold' ? '#fbbf24' : zone === 'danger' ? '#f87171' : '#64748b';
+  const rowBg  = zone === 'gold' ? '#1a2e1a' : zone === 'danger' ? '#2a1010' : '#0f172a';
+  const numCol = zone === 'gold' ? '#fbbf24' : zone === 'danger' ? '#f87171' : '#64748b';
   const nameCol = zone === 'danger' ? '#fca5a5' : '#f1f5f9';
-  const ptsCol  = zone === 'gold' ? '#fbbf24' : zone === 'danger' ? '#f87171' : '#e2e8f0';
-
+  const ptsCol = zone === 'gold' ? '#fbbf24' : zone === 'danger' ? '#f87171' : '#e2e8f0';
   const badge = MEDALS[rank] ?? String(rank);
 
   return (
@@ -51,10 +48,8 @@ function RankRow({ rank, entry, zone }: { rank: number; entry: ParticipantScore;
       </span>
       {p.avatarFile ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={`/avatar/${p.avatarFile}`} alt={p.name} width={36} height={36}
+        <img src={`/avatar/${p.avatarFile}`} alt={p.name} width={36} height={36}
           style={{ borderRadius: '50%', objectFit: 'cover', flexShrink: 0, border: zone === 'gold' ? '2px solid #fbbf24' : '1px solid #334155' }}
-          crossOrigin="anonymous"
         />
       ) : (
         <InitialsBadge id={p.id} name={p.name} size={36} gold={zone === 'gold'} />
@@ -78,15 +73,14 @@ function SectionHeader({ label, bg, color }: { label: string; bg: string; color:
 }
 
 function ShareCard({ leaderboard }: { leaderboard: ParticipantScore[] }) {
-  const total   = leaderboard.length;
-  const g4      = leaderboard.slice(0, G4);
-  const middle  = leaderboard.slice(G4, total - Z4);
-  const z4      = leaderboard.slice(total - Z4);
-  const ranks   = computeRanks(leaderboard);
+  const total  = leaderboard.length;
+  const g4     = leaderboard.slice(0, G4);
+  const middle = leaderboard.slice(G4, total - Z4);
+  const z4     = leaderboard.slice(total - Z4);
+  const ranks  = computeRanks(leaderboard);
 
   return (
-    <div style={{ background: '#020617', fontFamily: 'system-ui, -apple-system, sans-serif', borderRadius: 16, overflow: 'hidden' }}>
-      {/* Header */}
+    <div style={{ width: 480, background: '#020617', fontFamily: 'system-ui, -apple-system, sans-serif', borderRadius: 16, overflow: 'hidden' }}>
       <div style={{ background: 'linear-gradient(to bottom, #052e16, #0f172a)', padding: '20px 16px 14px', textAlign: 'center' }}>
         <div style={{ fontSize: 34 }}>⚽</div>
         <div style={{ color: '#fff', fontWeight: 900, fontSize: 16, letterSpacing: 2, textTransform: 'uppercase', marginTop: 6 }}>
@@ -112,25 +106,27 @@ function ShareCard({ leaderboard }: { leaderboard: ParticipantScore[] }) {
 }
 
 export default function ExportRanking({ leaderboard }: { leaderboard: ParticipantScore[] }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  // Capture target: always in DOM, off-screen — avoids overflow/scroll clipping issues
+  const captureRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleExport = useCallback(async () => {
-    if (!cardRef.current) return;
+    if (!captureRef.current) return;
     setLoading(true);
     try {
-      const dataUrl = await toPng(cardRef.current, { pixelRatio: 2, cacheBust: true });
-      if (typeof navigator !== 'undefined' && navigator.share) {
-        const blob = await fetch(dataUrl).then((r) => r.blob());
-        const file = new File([blob], 'bolao-ranking.png', { type: 'image/png' });
-        await navigator.share({ files: [file], title: 'Bolão Copa 2026 — Ranking' });
-      } else {
-        const a = document.createElement('a');
-        a.href = dataUrl;
-        a.download = 'bolao-ranking.png';
-        a.click();
-      }
+      // Wait for any images still loading inside the capture div
+      const imgs = Array.from(captureRef.current.querySelectorAll('img'));
+      await Promise.all(imgs.map((img) =>
+        img.complete ? Promise.resolve() : new Promise<void>((res) => { img.onload = () => res(); img.onerror = () => res(); })
+      ));
+
+      const dataUrl = await toPng(captureRef.current, { pixelRatio: 2, cacheBust: false });
+
+      const a = document.createElement('a');
+      a.href = dataUrl;
+      a.download = 'bolao-ranking.png';
+      a.click();
     } catch (e) {
       console.error('Export failed', e);
     } finally {
@@ -140,6 +136,15 @@ export default function ExportRanking({ leaderboard }: { leaderboard: Participan
 
   return (
     <>
+      {/* Off-screen capture target — always rendered so images are pre-loaded */}
+      <div
+        ref={captureRef}
+        aria-hidden="true"
+        style={{ position: 'fixed', top: 0, left: '-9999px', zIndex: -1 }}
+      >
+        <ShareCard leaderboard={leaderboard} />
+      </div>
+
       <button
         onClick={() => setOpen(true)}
         className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700 hover:bg-emerald-600 active:bg-emerald-800 text-white font-bold rounded-xl text-xs transition-colors"
@@ -148,7 +153,6 @@ export default function ExportRanking({ leaderboard }: { leaderboard: Participan
       </button>
 
       {open && (
-        /* Full-screen modal: header + scrollable card + sticky buttons */
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col">
           {/* Top bar */}
           <div className="shrink-0 flex items-center justify-between px-4 py-3 border-b border-slate-800">
@@ -156,9 +160,9 @@ export default function ExportRanking({ leaderboard }: { leaderboard: Participan
             <button onClick={() => setOpen(false)} className="text-slate-400 hover:text-white text-xl leading-none px-1">✕</button>
           </div>
 
-          {/* Scrollable card */}
+          {/* Preview (visual only — not captured) */}
           <div className="flex-1 overflow-y-auto py-4 px-3">
-            <div ref={cardRef} className="mx-auto rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: 480 }}>
+            <div className="mx-auto rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: 480 }}>
               <ShareCard leaderboard={leaderboard} />
             </div>
           </div>
@@ -170,7 +174,7 @@ export default function ExportRanking({ leaderboard }: { leaderboard: Participan
               disabled={loading}
               className="flex-1 max-w-56 py-3 bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 text-white font-bold rounded-full text-sm transition-colors"
             >
-              {loading ? 'Gerando...' : '📥 Baixar / Compartilhar'}
+              {loading ? 'Gerando...' : '📥 Baixar imagem'}
             </button>
             <button
               onClick={() => setOpen(false)}
