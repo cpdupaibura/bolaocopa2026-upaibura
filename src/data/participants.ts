@@ -10,12 +10,12 @@ import { Participant } from '../lib/types';
  */
 export const PARTICIPANTS: Participant[] = [
   { id: 'eduardo-alex',  name: 'Eduardo Alex',      pdfFile: 'eduardo-alex.pdf',  avatarFile: 'eduardo-alex.png' },
-  { id: 'netinho',       name: 'Netinho',            pdfFile: 'netinho.pdf'       },
+  { id: 'netinho',       name: 'Netinho',            pdfFile: 'netinho.pdf',       avatarFile: 'netinho.png' },
   { id: 'enio-1',        name: 'Enio Batalha',       label: 'Aposta 1', pdfFile: 'enio-1.pdf',       avatarFile: 'enio.png' },
   { id: 'enio-2',        name: 'Enio Batalha',       label: 'Aposta 2', pdfFile: 'enio-2.pdf',       avatarFile: 'enio.png' },
   { id: 'bruno-1',       name: 'Bruno Thomaz',       label: 'Aposta 1', pdfFile: 'bruno-1.pdf',      avatarFile: 'bruno.png' },
   { id: 'bruno-2',       name: 'Bruno Thomaz',       label: 'Aposta 2', pdfFile: 'bruno-2.pdf',      avatarFile: 'bruno.png' },
-  { id: 'cleber',        name: 'Cleber',             pdfFile: 'cleber.pdf'        },
+  { id: 'cleber',        name: 'Cleber',             pdfFile: 'cleber.pdf',        avatarFile: 'cleber.png' },
   { id: 'diego',         name: 'Diego Rodrigo',      pdfFile: 'diego.pdf',         avatarFile: 'diego.png' },
   { id: 'graca',         name: 'Graça Santos',       pdfFile: 'graca.pdf',         avatarFile: 'graca.png' },
   { id: 'igor',          name: 'Igor Rafael',        pdfFile: 'igor.pdf',          avatarFile: 'igor.png' },
