@@ -94,9 +94,9 @@ export default function AvatarImg({
             <span className="text-white font-bold text-lg">{name}</span>
             <button
               onClick={() => setLightbox(false)}
-              className="text-slate-400 text-sm hover:text-white transition-colors"
+              className="px-6 py-2 bg-red-600 hover:bg-red-500 active:bg-red-700 text-white font-bold rounded-full text-sm transition-colors shadow-lg"
             >
-              Fechar
+              ✕ Fechar
             </button>
           </div>
         </div>
