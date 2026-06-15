@@ -118,6 +118,10 @@ function GroupCard({ group }: { group: Group }) {
   );
 }
 
+function getDisplayRank(leaderboard: ParticipantScore[], index: number): number {
+  return leaderboard.filter((e) => e.points > leaderboard[index].points).length + 1;
+}
+
 export default function Home() {
   const leaderboard = calculateLeaderboard(PARTICIPANTS, BETS, RESULTS);
   const maxPoints = leaderboard[0]?.points ?? 0;
@@ -151,7 +155,7 @@ export default function Home() {
             leaderboard.map((entry, i) => (
               <LeaderboardRow
                 key={entry.participant.id}
-                rank={i + 1}
+                rank={getDisplayRank(leaderboard, i)}
                 entry={entry}
                 maxPoints={maxPoints}
               />
