@@ -12,6 +12,11 @@ function computeRanks(lb: ParticipantScore[]): number[] {
   return lb.map((entry) => lb.filter((e) => e.points > entry.points).length + 1);
 }
 
+// Reverse rank: 1 = lowest points (for Z4 boundary)
+function computeRevRanks(lb: ParticipantScore[]): number[] {
+  return lb.map((entry) => lb.filter((e) => e.points < entry.points).length + 1);
+}
+
 const BG_COLORS = ['#047857','#0369a1','#7c3aed','#be185d','#b45309','#0f766e','#4338ca','#9d174d'];
 function colorFor(id: string) {
   let h = 0;
@@ -73,11 +78,14 @@ function SectionHeader({ label, bg, color }: { label: string; bg: string; color:
 }
 
 function ShareCard({ leaderboard }: { leaderboard: ParticipantScore[] }) {
-  const total  = leaderboard.length;
-  const g4     = leaderboard.slice(0, G4);
-  const middle = leaderboard.slice(G4, total - Z4);
-  const z4     = leaderboard.slice(total - Z4);
-  const ranks  = computeRanks(leaderboard);
+  const ranks    = computeRanks(leaderboard);
+  const revRanks = computeRevRanks(leaderboard);
+
+  // Include ties: everyone with rank ≤ G4 goes to top group; reverse rank ≤ Z4 to bottom
+  const withMeta = leaderboard.map((entry, i) => ({ entry, rank: ranks[i], revRank: revRanks[i] }));
+  const g4     = withMeta.filter(({ rank })              => rank    <= G4);
+  const z4     = withMeta.filter(({ revRank })           => revRank <= Z4);
+  const middle = withMeta.filter(({ rank, revRank })     => rank > G4 && revRank > Z4);
 
   return (
     <div style={{ width: 480, background: '#020617', fontFamily: 'system-ui, -apple-system, sans-serif', borderRadius: 16, overflow: 'hidden' }}>
@@ -89,14 +97,14 @@ function ShareCard({ leaderboard }: { leaderboard: ParticipantScore[] }) {
         <div style={{ color: '#6b7280', fontSize: 11, marginTop: 4 }}>Fase de Grupos — Classificação parcial</div>
       </div>
 
-      <SectionHeader label="🏆  G4 — Os Líderes" bg="#14532d" color="#86efac" />
-      {g4.map((e, i) => <RankRow key={e.participant.id} rank={ranks[i]} entry={e} zone="gold" />)}
+      <SectionHeader label={`🏆  G${g4.length} — Os Líderes`} bg="#14532d" color="#86efac" />
+      {g4.map(({ entry, rank }) => <RankRow key={entry.participant.id} rank={rank} entry={entry} zone="gold" />)}
 
       <SectionHeader label="📊  Meio da Tabela" bg="#1e293b" color="#94a3b8" />
-      {middle.map((e, i) => <RankRow key={e.participant.id} rank={ranks[G4 + i]} entry={e} zone="normal" />)}
+      {middle.map(({ entry, rank }) => <RankRow key={entry.participant.id} rank={rank} entry={entry} zone="normal" />)}
 
-      <SectionHeader label="💀  Z4 — Zona de Rebaixamento" bg="#450a0a" color="#fca5a5" />
-      {z4.map((e, i) => <RankRow key={e.participant.id} rank={ranks[total - Z4 + i]} entry={e} zone="danger" />)}
+      <SectionHeader label={`💀  Z${z4.length} — Zona de Rebaixamento`} bg="#450a0a" color="#fca5a5" />
+      {z4.map(({ entry, rank }) => <RankRow key={entry.participant.id} rank={rank} entry={entry} zone="danger" />)}
 
       <div style={{ padding: '8px 14px', background: '#0f172a', textAlign: 'center', color: '#374151', fontSize: 10 }}>
         bolão · UPA Ibura · 2026
