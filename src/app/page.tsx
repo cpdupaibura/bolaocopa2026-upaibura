@@ -42,14 +42,16 @@ function LeaderboardRow({
           size={44}
           ring={isTop}
         />
-        <span className="font-bold text-white flex-1 text-base min-w-0">
-          <span className="block truncate">{entry.participant.name}</span>
+        <Link href={`/apostador/${entry.participant.id}`} className="flex-1 min-w-0 group">
+          <span className="block truncate font-bold text-white text-base group-hover:text-emerald-400 transition-colors">
+            {entry.participant.name}
+          </span>
           {entry.participant.label && (
             <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide">
               {entry.participant.label}
             </span>
           )}
-        </span>
+        </Link>
         {medal && <span className="text-xl shrink-0">{medal}</span>}
         <span
           className={`font-extrabold text-lg tabular-nums shrink-0 ${
