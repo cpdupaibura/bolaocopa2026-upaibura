@@ -62,8 +62,13 @@ function RankRow({ rank, entry, zone }: { rank: number; entry: ParticipantScore;
       <span style={{ flex: 1, fontSize: 13, fontWeight: 600, color: nameCol, overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
         {label}
       </span>
-      <span style={{ fontSize: 15, fontWeight: 800, color: ptsCol, flexShrink: 0 }}>
-        {entry.points}<span style={{ fontSize: 10, fontWeight: 400, color: '#64748b', marginLeft: 2 }}>pts</span>
+      <span style={{
+        flexShrink: 0, background: zone === 'gold' ? '#713f12' : zone === 'danger' ? '#450a0a' : '#1e293b',
+        border: `1px solid ${zone === 'gold' ? '#fbbf24' : zone === 'danger' ? '#f87171' : '#334155'}`,
+        borderRadius: 8, padding: '2px 8px', display: 'flex', alignItems: 'baseline', gap: 2,
+      }}>
+        <span style={{ fontSize: 16, fontWeight: 900, color: ptsCol }}>{entry.points}</span>
+        <span style={{ fontSize: 10, fontWeight: 600, color: zone === 'normal' ? '#94a3b8' : ptsCol }}>pts</span>
       </span>
     </div>
   );
