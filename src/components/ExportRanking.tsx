@@ -93,7 +93,7 @@ function ShareCard({ leaderboard }: { leaderboard: ParticipantScore[] }) {
   const middle = withMeta.filter(({ rank, revRank })     => rank > G4 && revRank > Z4);
 
   return (
-    <div style={{ width: 480, background: '#020617', fontFamily: 'system-ui, -apple-system, sans-serif', borderRadius: 16, overflow: 'hidden' }}>
+    <div style={{ width: '100%', background: '#020617', fontFamily: 'system-ui, -apple-system, sans-serif', borderRadius: 16, overflow: 'hidden' }}>
       <div style={{ background: 'linear-gradient(to bottom, #052e16, #0f172a)', padding: '20px 16px 14px', textAlign: 'center' }}>
         <div style={{ fontSize: 34 }}>⚽</div>
         <div style={{ color: '#fff', fontWeight: 900, fontSize: 16, letterSpacing: 2, textTransform: 'uppercase', marginTop: 6 }}>
@@ -149,11 +149,11 @@ export default function ExportRanking({ leaderboard }: { leaderboard: Participan
 
   return (
     <>
-      {/* Off-screen capture target — always rendered so images are pre-loaded */}
+      {/* Off-screen capture target — fixed 480px so the exported PNG is always full size */}
       <div
         ref={captureRef}
         aria-hidden="true"
-        style={{ position: 'fixed', top: 0, left: '-9999px', zIndex: -1 }}
+        style={{ position: 'fixed', top: 0, left: '-9999px', zIndex: -1, width: 480 }}
       >
         <ShareCard leaderboard={leaderboard} />
       </div>
