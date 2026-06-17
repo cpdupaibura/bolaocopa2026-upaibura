@@ -981,19 +981,43 @@ const ionaldoBets: PlayerBets = {
 
   // GRUPO H
   H1: s('home'),
-  H2: s('away'),
+  H2: s('draw'),
   H3: s('home'),
   H4: s('home'),
   H5: s('draw'),
   H6: s('away'),
 
   // GRUPO I
-  I1: s('draw'),
-  I2: s('home'),
-  I3: s('draw'),
-  I4: s('away'),
+  I1: s('home'),
+  I2: s('away'),
+  I3: s('home'),
+  I4: s('draw'),
   I5: s('away'),
-  I6: s('away'),
+  I6: s('home'),
+
+  // GRUPO J
+  J1: s('home'),
+  J2: s('home'),
+  J3: s('home'),
+  J4: s('away'),
+  J5: s('home'),
+  J6: s('away'),
+
+  // GRUPO K
+  K1: s('home'),
+  K2: s('away'),
+  K3: s('home'),
+  K4: s('home'),
+  K5: s('draw'),
+  K6: s('away'),
+
+  // GRUPO L
+  L1: s('draw'),
+  L2: s('home'),
+  L3: s('draw'),
+  L4: s('away'),
+  L5: s('away'),
+  L6: s('away'),
 };
 
 // ════════════════════════════════════════════════════════════
