@@ -28,4 +28,7 @@ export const RESULTS: Record<string, GameResult> = {
   'H2': { home: 1, away: 1 }, // Arábia Saudita 1×1 Uruguai
   'G2': { home: 2, away: 2 }, // Irã 2×2 Nova Zelândia
   'I1': { home: 3, away: 1 }, // França 3×1 Senegal
+  'I2': { home: 1, away: 4 }, // Iraque 1×4 Noruega
+  'J1': { home: 3, away: 0 }, // Argentina 3×0 Argélia
+  'J2': { home: 3, away: 1 }, // Áustria 3×1 Jordânia
 };
