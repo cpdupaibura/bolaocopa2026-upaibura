@@ -31,4 +31,5 @@ export const RESULTS: Record<string, GameResult> = {
   'I2': { home: 1, away: 4 }, // Iraque 1×4 Noruega
   'J1': { home: 3, away: 0 }, // Argentina 3×0 Argélia
   'J2': { home: 3, away: 1 }, // Áustria 3×1 Jordânia
+  'K1': { home: 1, away: 1 }, // Portugal 1×1 Congo
 };
