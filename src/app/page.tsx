@@ -187,7 +187,7 @@ export default function Home() {
               Fichas preenchidas manualmente para auditoria
             </p>
             <div className="flex flex-wrap gap-2">
-              {PARTICIPANTS.filter((p) => p.pdfFile).map((p) => (
+              {[...PARTICIPANTS].filter((p) => p.pdfFile).sort((a, b) => displayName(a).localeCompare(displayName(b), 'pt')).map((p) => (
                 <a
                   key={p.id}
                   href={`/pdfs/${p.pdfFile}`}
