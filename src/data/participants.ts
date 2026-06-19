@@ -26,6 +26,6 @@ export const PARTICIPANTS: Participant[] = [
   { id: 'kamilla',       name: 'Kamilla Ravenna',    pdfFile: 'kamilla.pdf',       avatarFile: 'kamilla.png' },
   { id: 'rebeca',        name: 'Rebeca Montenegro',  pdfFile: 'rebeca.pdf',        avatarFile: 'rebeca.png' },
   { id: 'rosinaldo',     name: 'Rosinaldo Barbosa',  pdfFile: 'rosinaldo.pdf',     avatarFile: 'rosinaldo.png' },
-  { id: 'jorge-edson',   name: 'Jorginho',           pdfFile: 'jorge-edson.pdf',   avatarFile: 'jorge-edson.png' },
+  { id: 'jorge-edson',   name: 'Jorginho',           pdfFile: 'jorginho.pdf',      avatarFile: 'jorge-edson.png' },
   { id: 'jorge-fernandes', name: 'Jorge Fernandes',  pdfFile: 'jorge-fernandes.pdf', avatarFile: 'jorge-fernandes.png' },
 ];
