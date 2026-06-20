@@ -14,6 +14,7 @@ export interface Game {
   homeTeamId: string;
   awayTeamId: string;
   date: string; // 'YYYY-MM-DD'
+  time?: string; // horário em Recife (BRT), ex: '16h00'
 }
 
 export interface Participant {

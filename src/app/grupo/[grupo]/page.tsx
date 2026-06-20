@@ -48,6 +48,9 @@ function GameCard({ game }: { game: Game }) {
             <>
               <span className="text-slate-600 font-bold text-lg">vs</span>
               <span className="text-[11px] text-slate-500">{formatDate(game.date)}</span>
+              {game.time && (
+                <span className="text-[11px] text-amber-500 font-semibold">{game.time}</span>
+              )}
             </>
           )}
         </div>
