@@ -40,4 +40,5 @@ export const RESULTS: Record<string, GameResult> = {
   'B4': { home: 6, away: 0 }, // Canadá 6×0 Catar
   'A4': { home: 1, away: 0 }, // México 1×0 Coreia do Sul
   'D4': { home: 2, away: 0 }, // EUA 2 x 0 Australia
+  'C3': { home: 0, away: 1 }, // Escócia 0 x 1 Marrocos
 };
