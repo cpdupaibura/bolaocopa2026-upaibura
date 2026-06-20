@@ -78,10 +78,14 @@ export default function AgendaPage() {
                           {home?.name}
                         </span>
 
-                        {/* Score / vs */}
+                        {/* Score / time / vs */}
                         {played ? (
                           <span className="text-white font-extrabold tabular-nums text-base px-1 shrink-0">
                             {result.home}&nbsp;×&nbsp;{result.away}
+                          </span>
+                        ) : game.time ? (
+                          <span className="text-amber-400 font-bold text-xs px-1 shrink-0 tabular-nums">
+                            {game.time}
                           </span>
                         ) : (
                           <span className="text-slate-600 font-bold text-xs px-1 shrink-0">vs</span>
