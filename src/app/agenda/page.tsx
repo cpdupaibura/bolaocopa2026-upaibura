@@ -16,11 +16,14 @@ function parseDate(iso: string) {
 }
 
 export default function AgendaPage() {
-  // Group games by date preserving insertion order
   const byDate = new Map<string, typeof GAMES>();
   for (const g of GAMES) {
     if (!byDate.has(g.date)) byDate.set(g.date, []);
     byDate.get(g.date)!.push(g);
+  }
+  // Sort games within each day by time
+  for (const games of byDate.values()) {
+    games.sort((a, b) => (a.time ?? '').localeCompare(b.time ?? ''));
   }
 
   return (
