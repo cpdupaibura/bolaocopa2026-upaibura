@@ -38,6 +38,7 @@ export const RESULTS: Record<string, GameResult> = {
   'A3': { home: 1, away: 1 }, // Rep. Tcheca 1x1 África do Sul
   'B3': { home: 4, away: 1 }, // Suíça 4×1 Bósnia
   'B4': { home: 6, away: 0 }, // Canadá 6×0 Catar
+  'D3': { home: 0, away: 1 }, // Turquia 0×1 Paraguai
   'A4': { home: 1, away: 0 }, // México 1×0 Coreia do Sul
   'D4': { home: 2, away: 0 }, // EUA 2 x 0 Australia
   'C3': { home: 0, away: 1 }, // Escócia 0 x 1 Marrocos
