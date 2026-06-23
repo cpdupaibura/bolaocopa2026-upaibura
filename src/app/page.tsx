@@ -175,17 +175,14 @@ export default function Home() {
               Apostas ainda não cadastradas
             </div>
           ) : (
-            tiers.map((entries) => {
-              const rank = leaderboard.filter((e) => e.points > entries[0].points).length + 1;
-              return (
-                <TiedGroupCard
-                  key={`${rank}-${entries[0].points}`}
-                  rank={rank}
-                  entries={entries}
-                  maxPoints={maxPoints}
-                />
-              );
-            })
+            tiers.map((entries, tierIndex) => (
+              <TiedGroupCard
+                key={entries[0].points}
+                rank={tierIndex + 1}
+                entries={entries}
+                maxPoints={maxPoints}
+              />
+            ))
           )}
         </section>
 
