@@ -8,13 +8,21 @@ const MEDALS: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' };
 const G4 = 4;
 const Z4 = 4;
 
-function computeRanks(lb: ParticipantScore[]): number[] {
-  return lb.map((entry) => lb.filter((e) => e.points > entry.points).length + 1);
-}
-
-// Reverse rank: 1 = lowest points (for Z4 boundary)
-function computeRevRanks(lb: ParticipantScore[]): number[] {
-  return lb.map((entry) => lb.filter((e) => e.points < entry.points).length + 1);
+// Rank sequencial por tier (empatados = mesmo tier, próximo grupo = tier+1)
+function computeRanks(lb: ParticipantScore[]): { rank: number; revRank: number }[] {
+  const fwdMap = new Map<number, number>();
+  let tier = 0, lastPts: number | null = null;
+  for (const e of lb) {
+    if (e.points !== lastPts) { tier++; lastPts = e.points; }
+    fwdMap.set(e.points, tier);
+  }
+  const revMap = new Map<number, number>();
+  let revTier = 0, lastRevPts: number | null = null;
+  for (const e of [...lb].reverse()) {
+    if (e.points !== lastRevPts) { revTier++; lastRevPts = e.points; }
+    revMap.set(e.points, revTier);
+  }
+  return lb.map((e) => ({ rank: fwdMap.get(e.points)!, revRank: revMap.get(e.points)! }));
 }
 
 const BG_COLORS = ['#047857','#0369a1','#7c3aed','#be185d','#b45309','#0f766e','#4338ca','#9d174d'];
@@ -83,11 +91,7 @@ function SectionHeader({ label, bg, color }: { label: string; bg: string; color:
 }
 
 function ShareCard({ leaderboard }: { leaderboard: ParticipantScore[] }) {
-  const ranks    = computeRanks(leaderboard);
-  const revRanks = computeRevRanks(leaderboard);
-
-  // Include ties: everyone with rank ≤ G4 goes to top group; reverse rank ≤ Z4 to bottom
-  const withMeta = leaderboard.map((entry, i) => ({ entry, rank: ranks[i], revRank: revRanks[i] }));
+  const withMeta = computeRanks(leaderboard).map((meta, i) => ({ entry: leaderboard[i], ...meta }));
   const g4     = withMeta.filter(({ rank })              => rank    <= G4);
   const z4     = withMeta.filter(({ revRank })           => revRank <= Z4);
   const middle = withMeta.filter(({ rank, revRank })     => rank > G4 && revRank > Z4);
