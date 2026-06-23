@@ -12,16 +12,16 @@ import ExportRanking from '@/components/ExportRanking';
 const ALL_GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 const MEDALS = ['🥇', '🥈', '🥉'];
 
-function LeaderboardRow({
+function TiedGroupCard({
   rank,
-  entry,
+  entries,
   maxPoints,
 }: {
   rank: number;
-  entry: ParticipantScore;
+  entries: ParticipantScore[];
   maxPoints: number;
 }) {
-  const pct = maxPoints > 0 ? Math.round((entry.points / maxPoints) * 100) : 0;
+  const pct = maxPoints > 0 ? Math.round((entries[0].points / maxPoints) * 100) : 0;
   const medal = rank <= 3 ? MEDALS[rank - 1] : null;
   const isTop = rank === 1;
 
@@ -33,37 +33,24 @@ function LeaderboardRow({
           : 'bg-slate-900 border-slate-800'
       }`}
     >
-      <div className="flex items-center gap-3">
-        <span className="text-slate-500 font-bold w-5 text-sm text-right shrink-0">{rank}</span>
-        <AvatarImg
-          id={entry.participant.id}
-          name={entry.participant.name}
-          avatarFile={entry.participant.avatarFile}
-          size={44}
-          ring={isTop}
-        />
-        <Link href={`/apostador/${entry.participant.id}`} className="flex-1 min-w-0 group">
-          <span className="block truncate font-bold text-white text-base group-hover:text-emerald-400 transition-colors">
-            {entry.participant.name}
-          </span>
-          {entry.participant.label && (
-            <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide">
-              {entry.participant.label}
-            </span>
-          )}
-        </Link>
-        {medal && <span className="text-xl shrink-0">{medal}</span>}
+      {/* Header: posição + medal + pontos */}
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+          <span className="text-slate-500 font-bold text-sm w-5 text-right shrink-0">{rank}</span>
+          {medal && <span className="text-xl leading-none">{medal}</span>}
+        </div>
         <span
           className={`font-extrabold text-lg tabular-nums shrink-0 ${
             isTop ? 'text-amber-400' : 'text-slate-200'
           }`}
         >
-          {entry.points}
+          {entries[0].points}
           <span className="text-xs font-normal text-slate-500 ml-1">pts</span>
         </span>
       </div>
 
-      <div className="mt-2 ml-22 h-1 bg-slate-800 rounded-full overflow-hidden">
+      {/* Barra de progresso */}
+      <div className="h-1 bg-slate-800 rounded-full overflow-hidden mb-3">
         <div
           className={`h-full rounded-full transition-all ${
             isTop ? 'bg-amber-400' : 'bg-emerald-600'
@@ -72,17 +59,44 @@ function LeaderboardRow({
         />
       </div>
 
-      {(entry.simpleCorrect > 0 || entry.advancedCorrect > 0 || entry.gamesWithBets > 0) && (
-        <div className="mt-1.5 ml-22 flex gap-3 text-xs text-slate-500">
-          {entry.simpleCorrect > 0 && (
-            <span className="text-emerald-500">{entry.simpleCorrect} simples ✓</span>
-          )}
-          {entry.advancedCorrect > 0 && (
-            <span className="text-amber-500">{entry.advancedCorrect} avançadas ✓</span>
-          )}
-          <span>{entry.gamesWithBets} apostas</span>
-        </div>
-      )}
+      {/* Lista de apostadores empatados */}
+      <div>
+        {entries.map((entry, idx) => (
+          <div key={entry.participant.id}>
+            {idx > 0 && <div className="h-px bg-slate-800 my-3" />}
+            <div className="flex items-center gap-3">
+              <AvatarImg
+                id={entry.participant.id}
+                name={entry.participant.name}
+                avatarFile={entry.participant.avatarFile}
+                size={44}
+                ring={isTop}
+              />
+              <Link href={`/apostador/${entry.participant.id}`} className="flex-1 min-w-0 group">
+                <span className="block truncate font-bold text-white text-base group-hover:text-emerald-400 transition-colors">
+                  {entry.participant.name}
+                </span>
+                {entry.participant.label && (
+                  <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide">
+                    {entry.participant.label}
+                  </span>
+                )}
+              </Link>
+            </div>
+            {(entry.simpleCorrect > 0 || entry.advancedCorrect > 0 || entry.gamesWithBets > 0) && (
+              <div className="mt-1.5 ml-14 flex gap-3 text-xs text-slate-500">
+                {entry.simpleCorrect > 0 && (
+                  <span className="text-emerald-500">{entry.simpleCorrect} simples ✓</span>
+                )}
+                {entry.advancedCorrect > 0 && (
+                  <span className="text-amber-500">{entry.advancedCorrect} avançadas ✓</span>
+                )}
+                <span>{entry.gamesWithBets} apostas</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -120,13 +134,20 @@ function GroupCard({ group }: { group: Group }) {
   );
 }
 
-function getDisplayRank(leaderboard: ParticipantScore[], index: number): number {
-  return leaderboard.filter((e) => e.points > leaderboard[index].points).length + 1;
-}
-
 export default function Home() {
   const leaderboard = calculateLeaderboard(PARTICIPANTS, BETS, RESULTS);
   const maxPoints = leaderboard[0]?.points ?? 0;
+
+  // Agrupa empatados em tiers
+  const tiers: ParticipantScore[][] = [];
+  for (const entry of leaderboard) {
+    const last = tiers[tiers.length - 1];
+    if (!last || last[0].points !== entry.points) {
+      tiers.push([entry]);
+    } else {
+      last.push(entry);
+    }
+  }
 
   return (
     <div className="min-h-screen bg-slate-950 pb-10">
@@ -149,19 +170,22 @@ export default function Home() {
             </h2>
             <ExportRanking leaderboard={leaderboard} />
           </div>
-          {leaderboard.length === 0 ? (
+          {tiers.length === 0 ? (
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 text-center text-slate-500 text-sm">
               Apostas ainda não cadastradas
             </div>
           ) : (
-            leaderboard.map((entry, i) => (
-              <LeaderboardRow
-                key={entry.participant.id}
-                rank={getDisplayRank(leaderboard, i)}
-                entry={entry}
-                maxPoints={maxPoints}
-              />
-            ))
+            tiers.map((entries) => {
+              const rank = leaderboard.filter((e) => e.points > entries[0].points).length + 1;
+              return (
+                <TiedGroupCard
+                  key={`${rank}-${entries[0].points}`}
+                  rank={rank}
+                  entries={entries}
+                  maxPoints={maxPoints}
+                />
+              );
+            })
           )}
         </section>
 

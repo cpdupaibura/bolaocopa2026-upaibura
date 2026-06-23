@@ -6,6 +6,7 @@ const TABS = [
   { href: '/',       icon: '🏆', label: 'Ranking' },
   { href: '/agenda', icon: '📅', label: 'Agenda'  },
   { href: '/grupos', icon: '⚽', label: 'Grupos'  },
+  { href: '/resumo', icon: '📋', label: 'Resumo'  },
 ] as const;
 
 export default function BottomNav() {
