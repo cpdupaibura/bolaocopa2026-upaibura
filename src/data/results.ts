@@ -71,4 +71,8 @@ export const RESULTS: Record<string, GameResult> = {
   'K4': { home: 1, away: 0 }, // Colômbia 1×0 Congo
   'L3': { home: 0, away: 0 }, // Inglaterra 0×0 Gana
   'L4': { home: 0, away: 1 }, // Panamá 0×1 Croácia
+  'I5': { home: 1, away: 4 }, // Noruega 1×4 França
+  'I6': { home: 5, away: 0 }, // Senegal 5×0 Iraque
+  'H5': { home: 0, away: 0 }, // Cabo Verde 0×0 Arábia Saudita
+  'H6': { home: 0, away: 0 }, // Uruguai 0×0 Espanha
 };
