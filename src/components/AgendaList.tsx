@@ -11,6 +11,8 @@ export type GameRow = {
   awayFlag: string;
   awayName: string;
   result?: { home: number; away: number };
+  wonBy?: 'home' | 'away'; // para jogos do mata-mata (sem placar)
+  href?: string;            // se ausente, não cria link
 };
 
 export type DaySection = {
@@ -29,13 +31,11 @@ function toISO(d: Date) {
 }
 
 export default function AgendaList({ days }: { days: DaySection[] }) {
-  // Começa com todos abertos (seguro para SSR / hidratação)
   const [openDays, setOpenDays] = useState<Set<string>>(
     () => new Set(days.map((d) => d.date))
   );
   const [today, setToday] = useState('');
 
-  // Após montar no cliente: colapsa dias passados e marca hoje
   useEffect(() => {
     const t = toISO(new Date());
     setToday(t);
@@ -43,7 +43,6 @@ export default function AgendaList({ days }: { days: DaySection[] }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Rola até o dia de hoje após o rerender que colapsa os passados
   useEffect(() => {
     if (!today) return;
     const el = document.querySelector('[data-today]') as HTMLElement | null;
@@ -73,7 +72,6 @@ export default function AgendaList({ days }: { days: DaySection[] }) {
             className="mb-1"
             {...(isToday ? { 'data-today': '' } : {})}
           >
-            {/* Cabeçalho clicável */}
             <button
               onClick={() => toggle(day.date)}
               className={`w-full flex items-center gap-2 px-2 py-2.5 rounded-lg text-left transition-colors ${
@@ -104,45 +102,68 @@ export default function AgendaList({ days }: { days: DaySection[] }) {
               )}
             </button>
 
-            {/* Jogos do dia */}
             {isOpen && (
               <div className="space-y-2 pb-3">
                 {day.games.map((game) => {
-                  const played = game.result !== undefined;
-                  return (
-                    <Link key={game.id} href={`/partida/${game.id.toLowerCase()}`}>
-                      <div
-                        className={`flex items-center gap-2 rounded-xl px-3 py-3 border transition-colors ${
-                          played
-                            ? 'bg-slate-900 border-slate-800'
-                            : 'bg-slate-900 border-slate-700 hover:border-emerald-700 active:border-emerald-500'
-                        }`}
-                      >
-                        <span className="text-[10px] font-extrabold text-emerald-700 w-5 shrink-0">
-                          {game.id}
-                        </span>
-                        <span className="text-xl leading-none shrink-0">{game.homeFlag}</span>
-                        <span className="text-xs font-semibold text-slate-300 flex-1 truncate">
-                          {game.homeName}
-                        </span>
-                        {played ? (
+                  const played = game.result !== undefined || game.wonBy !== undefined;
+
+                  const inner = (
+                    <div
+                      className={`flex items-center gap-2 rounded-xl px-3 py-3 border transition-colors ${
+                        played
+                          ? 'bg-slate-900 border-slate-800'
+                          : 'bg-slate-900 border-slate-700 hover:border-emerald-700 active:border-emerald-500'
+                      }`}
+                    >
+                      <span className="text-[10px] font-extrabold text-emerald-700 w-8 shrink-0 truncate">
+                        {game.id}
+                      </span>
+                      <span className="text-xl leading-none shrink-0">{game.homeFlag}</span>
+                      <span className={`text-xs font-semibold flex-1 truncate ${
+                        game.wonBy === 'home' ? 'text-emerald-300' :
+                        game.wonBy === 'away' ? 'text-slate-500' :
+                        'text-slate-300'
+                      }`}>
+                        {game.homeName}
+                      </span>
+
+                      {/* Centro: placar / ✓ / horário */}
+                      {played ? (
+                        game.wonBy ? (
+                          <span className={`font-extrabold text-xs px-1 shrink-0 ${
+                            game.wonBy === 'home' ? 'text-emerald-400' : 'text-emerald-400'
+                          }`}>
+                            {game.wonBy === 'home' ? '✓ ·' : '· ✓'}
+                          </span>
+                        ) : (
                           <span className="text-white font-extrabold tabular-nums text-base px-1 shrink-0">
                             {game.result!.home}&nbsp;×&nbsp;{game.result!.away}
                           </span>
-                        ) : game.time ? (
-                          <span className="text-amber-400 font-bold text-xs px-1 shrink-0 tabular-nums">
-                            {game.time}
-                          </span>
-                        ) : (
-                          <span className="text-slate-600 font-bold text-xs px-1 shrink-0">vs</span>
-                        )}
-                        <span className="text-xs font-semibold text-slate-300 flex-1 truncate text-right">
-                          {game.awayName}
+                        )
+                      ) : game.time ? (
+                        <span className="text-amber-400 font-bold text-xs px-1 shrink-0 tabular-nums">
+                          {game.time}
                         </span>
-                        <span className="text-xl leading-none shrink-0">{game.awayFlag}</span>
-                        <span className="text-slate-700 text-xs shrink-0">›</span>
-                      </div>
-                    </Link>
+                      ) : (
+                        <span className="text-slate-600 font-bold text-xs px-1 shrink-0">vs</span>
+                      )}
+
+                      <span className={`text-xs font-semibold flex-1 truncate text-right ${
+                        game.wonBy === 'away' ? 'text-emerald-300' :
+                        game.wonBy === 'home' ? 'text-slate-500' :
+                        'text-slate-300'
+                      }`}>
+                        {game.awayName}
+                      </span>
+                      <span className="text-xl leading-none shrink-0">{game.awayFlag}</span>
+                      {game.href && <span className="text-slate-700 text-xs shrink-0">›</span>}
+                    </div>
+                  );
+
+                  return game.href ? (
+                    <Link key={game.id} href={game.href}>{inner}</Link>
+                  ) : (
+                    <div key={game.id}>{inner}</div>
                   );
                 })}
               </div>
