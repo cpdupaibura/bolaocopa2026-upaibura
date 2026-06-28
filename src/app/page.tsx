@@ -66,14 +66,14 @@ function ScoreCard({
                 size={44}
                 ring={isTop}
               />
-              <div className="flex-1 min-w-0">
-                <span className="block truncate font-bold text-white text-base">
+              <Link href={`/chave?p=${entry.participant.id}`} className="flex-1 min-w-0 group">
+                <span className="block truncate font-bold text-white text-base group-hover:text-emerald-400 transition-colors">
                   {entry.participant.name}
                 </span>
                 <span className="text-xs text-slate-500">
                   {entry.correct} acerto{entry.correct !== 1 ? 's' : ''} de {entry.total} aposta{entry.total !== 1 ? 's' : ''}
                 </span>
-              </div>
+              </Link>
             </div>
           </div>
         ))}

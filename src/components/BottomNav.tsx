@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 
 const TABS = [
   { href: '/',            icon: '🏆', label: 'Ranking'  },
-  { href: '/agenda',      icon: '📅', label: 'Agenda'   },
+  { href: '/chave',       icon: '🗂️', label: 'Chave'    },
   { href: '/fase-grupos', icon: '📦', label: 'Grupos'   },
   { href: '/resumo',      icon: '📋', label: 'Resumo'   },
 ] as const;
@@ -14,6 +14,7 @@ export default function BottomNav() {
 
   function isActive(href: string) {
     if (href === '/') return path === '/';
+    if (href === '/chave') return path.startsWith('/chave');
     if (href === '/fase-grupos') {
       return path.startsWith('/fase-grupos') || path.startsWith('/grupo') || path.startsWith('/partida');
     }
