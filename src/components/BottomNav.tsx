@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const TABS = [
-  { href: '/',       icon: '🏆', label: 'Ranking' },
-  { href: '/agenda', icon: '📅', label: 'Agenda'  },
-  { href: '/grupos', icon: '⚽', label: 'Grupos'  },
-  { href: '/resumo', icon: '📋', label: 'Resumo'  },
+  { href: '/',            icon: '🏆', label: 'Ranking'  },
+  { href: '/agenda',      icon: '📅', label: 'Agenda'   },
+  { href: '/fase-grupos', icon: '📦', label: 'Grupos'   },
+  { href: '/resumo',      icon: '📋', label: 'Resumo'   },
 ] as const;
 
 export default function BottomNav() {
@@ -14,8 +14,8 @@ export default function BottomNav() {
 
   function isActive(href: string) {
     if (href === '/') return path === '/';
-    if (href === '/grupos') {
-      return path.startsWith('/grupo') || path.startsWith('/partida');
+    if (href === '/fase-grupos') {
+      return path.startsWith('/fase-grupos') || path.startsWith('/grupo') || path.startsWith('/partida');
     }
     return path.startsWith(href);
   }

@@ -9,6 +9,7 @@ import { Participant } from '../lib/types';
  * pdfFile → nome do arquivo em /public/pdfs/
  */
 export const PARTICIPANTS: Participant[] = [
+  // Lista completa (usada na fase de grupos / arquivo histórico)
   { id: 'eduardo-alex',  name: 'Eduardo Alex',      pdfFile: 'eduardo-alex.pdf',  avatarFile: 'eduardo-alex.png' },
   { id: 'netinho',       name: 'Netinho',            pdfFile: 'netinho.pdf',       avatarFile: 'netinho.png' },
   { id: 'enio-1',        name: 'Enio Batalha',       label: 'Aposta 1', pdfFile: 'enio-1.pdf',       avatarFile: 'enio.png' },
@@ -29,3 +30,13 @@ export const PARTICIPANTS: Participant[] = [
   { id: 'jorge-edson',   name: 'Jorginho',           pdfFile: 'jorginho.pdf',      avatarFile: 'jorge-edson.png' },
   { id: 'jorge-fernandes', name: 'Jorge Fernandes',  pdfFile: 'jorge-fernandes.pdf', avatarFile: 'jorge-fernandes.png' },
 ];
+
+const KNOCKOUT_EXCLUDED = new Set(['graca', 'kamilla', 'netinho', 'cleber', 'enio-2', 'bruno-2', 'joao-paulo-2']);
+
+/**
+ * Participantes do mata-mata (sem os que saíram, com uma aposta por pessoa).
+ * Para adicionar segunda aposta: remover o ID do KNOCKOUT_EXCLUDED.
+ */
+export const KNOCKOUT_PARTICIPANTS: Participant[] = PARTICIPANTS
+  .filter((p) => !KNOCKOUT_EXCLUDED.has(p.id))
+  .map((p) => (p.label ? { ...p, label: undefined } : p));

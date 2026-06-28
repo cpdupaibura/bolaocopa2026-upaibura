@@ -58,3 +58,31 @@ export interface ParticipantScore {
   advancedCorrect: number;
   gamesWithBets: number;
 }
+
+export type KnockoutRound = 'r16' | 'qf' | 'sf' | 'semi' | 'tp' | 'final';
+
+export interface KnockoutGame {
+  id: string;
+  round: KnockoutRound;
+  date: string;
+  time: string;
+  homeLabel: string;
+  awayLabel: string;
+  homeTeamId?: string;
+  awayTeamId?: string;
+  homeSource?: string;
+  awaySource?: string;
+}
+
+export interface KnockoutBet {
+  participantId: string;
+  gameId: string;
+  pick: 'a' | 'b';
+}
+
+export interface KnockoutScore {
+  participant: Participant;
+  points: number;
+  correct: number;
+  total: number;
+}
