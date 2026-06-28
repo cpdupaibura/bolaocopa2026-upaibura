@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 const TABS = [
   { href: '/',            icon: '🏆', label: 'Ranking'  },
   { href: '/chave',       icon: '🗂️', label: 'Chave'    },
+  { href: '/agenda',      icon: '📅', label: 'Agenda'   },
   { href: '/fase-grupos', icon: '📦', label: 'Grupos'   },
-  { href: '/resumo',      icon: '📋', label: 'Resumo'   },
 ] as const;
 
 export default function BottomNav() {
