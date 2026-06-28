@@ -1,7 +1,32 @@
 import { KnockoutBet, KnockoutScore, Participant } from './types';
-import { KnockoutGame } from './types';
 import { KNOCKOUT_GAMES_BY_ID } from '../data/knockout_games';
 import { TEAMS } from '../data/teams';
+
+/**
+ * Verifica se o apostador acertou o confronto exato do jogo (ambas as seleções corretas).
+ * Para R16, o confronto é sempre fixo → sempre verdadeiro.
+ * Para QF em diante, o confronto é correto somente se o apostador acertou
+ * o resultado E o confronto de CADA jogo-fonte que alimenta este confronto.
+ */
+export function isConfrontoCorrect(
+  gameId: string,
+  bets: Record<string, 'a' | 'b'>,
+  results: Record<string, 'a' | 'b'>
+): boolean {
+  const game = KNOCKOUT_GAMES_BY_ID[gameId];
+  if (!game) return false;
+  if (game.round === 'r16') return true;
+
+  const homeSourceId = game.homeSource!;
+  const awaySourceId = game.awaySource!;
+
+  return (
+    results[homeSourceId] === bets[homeSourceId] &&
+    results[awaySourceId] === bets[awaySourceId] &&
+    isConfrontoCorrect(homeSourceId, bets, results) &&
+    isConfrontoCorrect(awaySourceId, bets, results)
+  );
+}
 
 export function calculateKnockoutLeaderboard(
   participants: Participant[],
@@ -11,11 +36,13 @@ export function calculateKnockoutLeaderboard(
   return participants
     .map((participant) => {
       const pBets = bets.filter((b) => b.participantId === participant.id);
+      const betsMap = Object.fromEntries(pBets.map((b) => [b.gameId, b.pick])) as Record<string, 'a' | 'b'>;
       let points = 0;
       let correct = 0;
       for (const bet of pBets) {
         const result = results[bet.gameId];
         if (!result) continue;
+        if (!isConfrontoCorrect(bet.gameId, betsMap, results)) continue;
         if (bet.pick === result) {
           points++;
           correct++;
