@@ -50,7 +50,6 @@ export default function AvatarImg({
   ring?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
-  const [lightbox, setLightbox] = useState(false);
 
   const ringClass = ring
     ? 'ring-2 ring-amber-400 ring-offset-2 ring-offset-slate-950'
@@ -61,46 +60,19 @@ export default function AvatarImg({
   }
 
   return (
-    <>
-      <button
-        type="button"
-        onClick={() => setLightbox(true)}
-        className={`rounded-full overflow-hidden shrink-0 cursor-pointer ${ringClass} focus:outline-none`}
-        style={{ width: size, height: size }}
-        aria-label={`Ver foto de ${name}`}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={`/avatar/${avatarFile}`}
-          alt={name}
-          width={size}
-          height={size}
-          className="object-cover w-full h-full"
-          onError={() => setFailed(true)}
-        />
-      </button>
-
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-          onClick={() => setLightbox(false)}
-        >
-          <div className="flex flex-col items-center gap-3 p-4" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={`/avatar/${avatarFile}`}
-              alt={name}
-              className="rounded-2xl max-w-[80vw] max-h-[70vh] object-contain shadow-2xl"
-            />
-            <span className="text-white font-bold text-lg">{name}</span>
-            <button
-              onClick={() => setLightbox(false)}
-              className="px-6 py-2 bg-red-600 hover:bg-red-500 active:bg-red-700 text-white font-bold rounded-full text-sm transition-colors shadow-lg"
-            >
-              ✕ Fechar
-            </button>
-          </div>
-        </div>
-      )}
-    </>
+    <div
+      className={`rounded-full overflow-hidden shrink-0 ${ringClass}`}
+      style={{ width: size, height: size }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`/avatar/${avatarFile}`}
+        alt={name}
+        width={size}
+        height={size}
+        className="object-cover w-full h-full"
+        onError={() => setFailed(true)}
+      />
+    </div>
   );
 }
