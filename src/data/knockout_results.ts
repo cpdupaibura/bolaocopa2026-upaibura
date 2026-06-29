@@ -4,5 +4,5 @@
  * 'b' = time/lado de baixo (away) venceu
  */
 export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
-  // Resultados serão adicionados aqui conforme os jogos forem realizados
+  'R16-3': 'b', // Canadá 1x0 África do Sul
 };
