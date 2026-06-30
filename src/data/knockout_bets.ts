@@ -384,7 +384,7 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'jorge-fernandes', gameId: 'R16-1',  pick: 'b' }, // Paraguai
 { participantId: 'jorge-fernandes', gameId: 'R16-2',  pick: 'a' }, // França
 { participantId: 'jorge-fernandes', gameId: 'R16-3',  pick: 'b' }, // Canadá
-{ participantId: 'jorge-fernandes', gameId: 'R16-4',  pick: 'a' }, // Holanda
+{ participantId: 'jorge-fernandes', gameId: 'R16-4',  pick: 'b' }, // Marrocos
 { participantId: 'jorge-fernandes', gameId: 'R16-5',  pick: 'b' }, // Croácia
 { participantId: 'jorge-fernandes', gameId: 'R16-6',  pick: 'a' }, // Espanha
 { participantId: 'jorge-fernandes', gameId: 'R16-7',  pick: 'a' }, // Estados Unidos
@@ -402,7 +402,7 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'jorge-fernandes', gameId: 'QF-2', pick: 'b' }, // Marrocos
 { participantId: 'jorge-fernandes', gameId: 'QF-3', pick: 'b' }, // Espanha
 { participantId: 'jorge-fernandes', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-{ participantId: 'jorge-fernandes', gameId: 'QF-5', pick: 'b' }, // Noruega
+{ participantId: 'jorge-fernandes', gameId: 'QF-5', pick: 'a' }, // Brasil
 { participantId: 'jorge-fernandes', gameId: 'QF-6', pick: 'b' }, // Inglaterra
 { participantId: 'jorge-fernandes', gameId: 'QF-7', pick: 'a' }, // Argentina
 { participantId: 'jorge-fernandes', gameId: 'QF-8', pick: 'a' }, // Suíça
@@ -410,7 +410,7 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'jorge-fernandes', gameId: 'SF-1', pick: 'a' }, // França
 { participantId: 'jorge-fernandes', gameId: 'SF-2', pick: 'a' }, // Espanha
 { participantId: 'jorge-fernandes', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'jorge-fernandes', gameId: 'SF-4', pick: 'b' }, // Argentina
+{ participantId: 'jorge-fernandes', gameId: 'SF-4', pick: 'a' }, // Argentina
 
 { participantId: 'jorge-fernandes', gameId: 'SEMI-1', pick: 'a' }, // França
 { participantId: 'jorge-fernandes', gameId: 'SEMI-2', pick: 'a' }, // Brasil
