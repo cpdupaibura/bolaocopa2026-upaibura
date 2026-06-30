@@ -8,4 +8,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'R16-3': 'b', // Canadá 1x0 África do Sul
   'R16-4': 'b', // Marrocos 1x1 Holanda (Marrocos venceu nos pênaltis)
   'R16-9': 'a', // Brasil 2x1 Japão
+  'R16-10': 'b', // Noruega 2x1 Costa do Marfim
+
+
 };
