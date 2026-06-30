@@ -47,42 +47,42 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 
   { participantId: 'ionaldo-jr', gameId: 'FINAL', pick: 'b' }, // Brasil campeão
 
-  // Jorginho (jorginho)
-  { participantId: 'jorginho', gameId: 'R16-1', pick: 'b' }, // Paraguai
-  { participantId: 'jorginho', gameId: 'R16-2', pick: 'a' }, // França
-  { participantId: 'jorginho', gameId: 'R16-3', pick: 'b' }, // Canadá
-  { participantId: 'jorginho', gameId: 'R16-4', pick: 'b' }, // Marrocos
-  { participantId: 'jorginho', gameId: 'R16-5', pick: 'a' }, // Portugal
-  { participantId: 'jorginho', gameId: 'R16-6', pick: 'a' }, // Espanha
-  { participantId: 'jorginho', gameId: 'R16-7', pick: 'a' }, // Estados Unidos
-  { participantId: 'jorginho', gameId: 'R16-8', pick: 'a' }, // Bélgica
-  { participantId: 'jorginho', gameId: 'R16-9', pick: 'a' }, // Brasil
-  { participantId: 'jorginho', gameId: 'R16-10', pick: 'b' }, // Noruega
-  { participantId: 'jorginho', gameId: 'R16-11', pick: 'a' }, // México
-  { participantId: 'jorginho', gameId: 'R16-12', pick: 'a' }, // Inglaterra
-  { participantId: 'jorginho', gameId: 'R16-13', pick: 'a' }, // Argentina
-  { participantId: 'jorginho', gameId: 'R16-14', pick: 'a' }, // Austrália
-  { participantId: 'jorginho', gameId: 'R16-15', pick: 'a' }, // Suíça
-  { participantId: 'jorginho', gameId: 'R16-16', pick: 'a' }, // Colômbia
+  // Jorginho (jorge-edson)
+  { participantId: 'jorge-edson', gameId: 'R16-1', pick: 'b' }, // Paraguai
+  { participantId: 'jorge-edson', gameId: 'R16-2', pick: 'a' }, // França
+  { participantId: 'jorge-edson', gameId: 'R16-3', pick: 'b' }, // Canadá
+  { participantId: 'jorge-edson', gameId: 'R16-4', pick: 'b' }, // Marrocos
+  { participantId: 'jorge-edson', gameId: 'R16-5', pick: 'a' }, // Portugal
+  { participantId: 'jorge-edson', gameId: 'R16-6', pick: 'a' }, // Espanha
+  { participantId: 'jorge-edson', gameId: 'R16-7', pick: 'a' }, // Estados Unidos
+  { participantId: 'jorge-edson', gameId: 'R16-8', pick: 'a' }, // Bélgica
+  { participantId: 'jorge-edson', gameId: 'R16-9', pick: 'a' }, // Brasil
+  { participantId: 'jorge-edson', gameId: 'R16-10', pick: 'b' }, // Noruega
+  { participantId: 'jorge-edson', gameId: 'R16-11', pick: 'a' }, // México
+  { participantId: 'jorge-edson', gameId: 'R16-12', pick: 'a' }, // Inglaterra
+  { participantId: 'jorge-edson', gameId: 'R16-13', pick: 'a' }, // Argentina
+  { participantId: 'jorge-edson', gameId: 'R16-14', pick: 'a' }, // Austrália
+  { participantId: 'jorge-edson', gameId: 'R16-15', pick: 'a' }, // Suíça
+  { participantId: 'jorge-edson', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-  { participantId: 'jorginho', gameId: 'QF-1', pick: 'b' }, // França
-  { participantId: 'jorginho', gameId: 'QF-2', pick: 'b' }, // Marrocos
-  { participantId: 'jorginho', gameId: 'QF-3', pick: 'b' }, // Espanha
-  { participantId: 'jorginho', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-  { participantId: 'jorginho', gameId: 'QF-5', pick: 'b' }, // Noruega
-  { participantId: 'jorginho', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-  { participantId: 'jorginho', gameId: 'QF-7', pick: 'a' }, // Argentina
-  { participantId: 'jorginho', gameId: 'QF-8', pick: 'b' }, // Colômbia
+  { participantId: 'jorge-edson', gameId: 'QF-1', pick: 'b' }, // França
+  { participantId: 'jorge-edson', gameId: 'QF-2', pick: 'b' }, // Marrocos
+  { participantId: 'jorge-edson', gameId: 'QF-3', pick: 'b' }, // Espanha
+  { participantId: 'jorge-edson', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
+  { participantId: 'jorge-edson', gameId: 'QF-5', pick: 'b' }, // Noruega
+  { participantId: 'jorge-edson', gameId: 'QF-6', pick: 'b' }, // Inglaterra
+  { participantId: 'jorge-edson', gameId: 'QF-7', pick: 'a' }, // Argentina
+  { participantId: 'jorge-edson', gameId: 'QF-8', pick: 'b' }, // Colômbia
 
-  { participantId: 'jorginho', gameId: 'SF-1', pick: 'a' }, // França
-  { participantId: 'jorginho', gameId: 'SF-2', pick: 'a' }, // Espanha
-  { participantId: 'jorginho', gameId: 'SF-3', pick: 'b' }, // Inglaterra
-  { participantId: 'jorginho', gameId: 'SF-4', pick: 'b' }, // Argentina
+  { participantId: 'jorge-edson', gameId: 'SF-1', pick: 'a' }, // França
+  { participantId: 'jorge-edson', gameId: 'SF-2', pick: 'a' }, // Espanha
+  { participantId: 'jorge-edson', gameId: 'SF-3', pick: 'b' }, // Inglaterra
+  { participantId: 'jorge-edson', gameId: 'SF-4', pick: 'b' }, // Argentina
 
-  { participantId: 'jorginho', gameId: 'SEMI-1', pick: 'a' }, // França
-  { participantId: 'jorginho', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+  { participantId: 'jorge-edson', gameId: 'SEMI-1', pick: 'a' }, // França
+  { participantId: 'jorge-edson', gameId: 'SEMI-2', pick: 'b' }, // Argentina
 
-  { participantId: 'jorginho', gameId: 'FINAL', pick: 'a' }, // França campeã
+  { participantId: 'jorge-edson', gameId: 'FINAL', pick: 'a' }, // França campeã
 
   // Eduardo Alex (eduardo-alex)
   { participantId: 'eduardo-alex', gameId: 'R16-1', pick: 'a' }, // Alemanha
@@ -121,42 +121,42 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 
   { participantId: 'eduardo-alex', gameId: 'FINAL', pick: 'a' }, // França campeã
 
-  // João (joao-paulo)
-{ participantId: 'joao', gameId: 'R16-1',  pick: 'a' }, // Alemanha
-{ participantId: 'joao', gameId: 'R16-2',  pick: 'a' }, // França
-{ participantId: 'joao', gameId: 'R16-3',  pick: 'b' }, // Canadá
-{ participantId: 'joao', gameId: 'R16-4',  pick: 'b' }, // Marrocos
-{ participantId: 'joao', gameId: 'R16-5',  pick: 'b' }, // Croácia
-{ participantId: 'joao', gameId: 'R16-6',  pick: 'a' }, // Espanha
-{ participantId: 'joao', gameId: 'R16-7',  pick: 'b' }, // Bósnia
-{ participantId: 'joao', gameId: 'R16-8',  pick: 'a' }, // Bélgica
-{ participantId: 'joao', gameId: 'R16-9',  pick: 'a' }, // Brasil
-{ participantId: 'joao', gameId: 'R16-10', pick: 'b' }, // Noruega
-{ participantId: 'joao', gameId: 'R16-11', pick: 'a' }, // México
-{ participantId: 'joao', gameId: 'R16-12', pick: 'a' }, // Inglaterra
-{ participantId: 'joao', gameId: 'R16-13', pick: 'a' }, // Argentina
-{ participantId: 'joao', gameId: 'R16-14', pick: 'a' }, // Austrália
-{ participantId: 'joao', gameId: 'R16-15', pick: 'a' }, // Suíça
-{ participantId: 'joao', gameId: 'R16-16', pick: 'a' }, // Colômbia
+  // João Paulo (joao-paulo-1)
+{ participantId: 'joao-paulo-1', gameId: 'R16-1',  pick: 'a' }, // Alemanha
+{ participantId: 'joao-paulo-1', gameId: 'R16-2',  pick: 'a' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'R16-3',  pick: 'b' }, // Canadá
+{ participantId: 'joao-paulo-1', gameId: 'R16-4',  pick: 'b' }, // Marrocos
+{ participantId: 'joao-paulo-1', gameId: 'R16-5',  pick: 'b' }, // Croácia
+{ participantId: 'joao-paulo-1', gameId: 'R16-6',  pick: 'a' }, // Espanha
+{ participantId: 'joao-paulo-1', gameId: 'R16-7',  pick: 'b' }, // Bósnia
+{ participantId: 'joao-paulo-1', gameId: 'R16-8',  pick: 'a' }, // Bélgica
+{ participantId: 'joao-paulo-1', gameId: 'R16-9',  pick: 'a' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'R16-10', pick: 'b' }, // Noruega
+{ participantId: 'joao-paulo-1', gameId: 'R16-11', pick: 'a' }, // México
+{ participantId: 'joao-paulo-1', gameId: 'R16-12', pick: 'a' }, // Inglaterra
+{ participantId: 'joao-paulo-1', gameId: 'R16-13', pick: 'a' }, // Argentina
+{ participantId: 'joao-paulo-1', gameId: 'R16-14', pick: 'a' }, // Austrália
+{ participantId: 'joao-paulo-1', gameId: 'R16-15', pick: 'a' }, // Suíça
+{ participantId: 'joao-paulo-1', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'joao', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'joao', gameId: 'QF-2', pick: 'b' }, // Marrocos
-{ participantId: 'joao', gameId: 'QF-3', pick: 'b' }, // Espanha
-{ participantId: 'joao', gameId: 'QF-4', pick: 'b' }, // Bélgica
-{ participantId: 'joao', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'joao', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'joao', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'joao', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'joao-paulo-1', gameId: 'QF-1', pick: 'b' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'QF-2', pick: 'b' }, // Marrocos
+{ participantId: 'joao-paulo-1', gameId: 'QF-3', pick: 'b' }, // Espanha
+{ participantId: 'joao-paulo-1', gameId: 'QF-4', pick: 'b' }, // Bélgica
+{ participantId: 'joao-paulo-1', gameId: 'QF-5', pick: 'a' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'QF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'joao-paulo-1', gameId: 'QF-7', pick: 'a' }, // Argentina
+{ participantId: 'joao-paulo-1', gameId: 'QF-8', pick: 'b' }, // Colômbia
 
-{ participantId: 'joao', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'joao', gameId: 'SF-2', pick: 'b' }, // Espanha
-{ participantId: 'joao', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'joao', gameId: 'SF-4', pick: 'b' }, // Argentina
+{ participantId: 'joao-paulo-1', gameId: 'SF-1', pick: 'a' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'SF-2', pick: 'b' }, // Espanha
+{ participantId: 'joao-paulo-1', gameId: 'SF-3', pick: 'a' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'SF-4', pick: 'b' }, // Argentina
 
-{ participantId: 'joao', gameId: 'SEMI-1', pick: 'b' }, // Brasil
-{ participantId: 'joao', gameId: 'SEMI-2', pick: 'a' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'SEMI-1', pick: 'b' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'SEMI-2', pick: 'a' }, // França
 
-{ participantId: 'joao', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
+{ participantId: 'joao-paulo-1', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 
 // Igor (igor)
 { participantId: 'igor', gameId: 'R16-1',  pick: 'a' }, // Alemanha
@@ -195,79 +195,79 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 
 { participantId: 'igor', gameId: 'FINAL', pick: 'a' }, // França campeã
 
-// Bruno (bruno)
-{ participantId: 'bruno', gameId: 'R16-1',  pick: 'a' }, // Alemanha
-{ participantId: 'bruno', gameId: 'R16-2',  pick: 'a' }, // França
-{ participantId: 'bruno', gameId: 'R16-3',  pick: 'b' }, // Canadá
-{ participantId: 'bruno', gameId: 'R16-4',  pick: 'a' }, // Holanda
-{ participantId: 'bruno', gameId: 'R16-5',  pick: 'a' }, // Portugal
-{ participantId: 'bruno', gameId: 'R16-6',  pick: 'a' }, // Espanha
-{ participantId: 'bruno', gameId: 'R16-7',  pick: 'a' }, // Estados Unidos
-{ participantId: 'bruno', gameId: 'R16-8',  pick: 'b' }, // Senegal
-{ participantId: 'bruno', gameId: 'R16-9',  pick: 'a' }, // Brasil
-{ participantId: 'bruno', gameId: 'R16-10', pick: 'b' }, // Noruega
-{ participantId: 'bruno', gameId: 'R16-11', pick: 'b' }, // Equador
-{ participantId: 'bruno', gameId: 'R16-12', pick: 'a' }, // Inglaterra
-{ participantId: 'bruno', gameId: 'R16-13', pick: 'a' }, // Argentina
-{ participantId: 'bruno', gameId: 'R16-14', pick: 'b' }, // Egito
-{ participantId: 'bruno', gameId: 'R16-15', pick: 'b' }, // Argélia
-{ participantId: 'bruno', gameId: 'R16-16', pick: 'a' }, // Colômbia
+// Bruno (bruno-1)
+{ participantId: 'bruno-1', gameId: 'R16-1',  pick: 'a' }, // Alemanha
+{ participantId: 'bruno-1', gameId: 'R16-2',  pick: 'a' }, // França
+{ participantId: 'bruno-1', gameId: 'R16-3',  pick: 'b' }, // Canadá
+{ participantId: 'bruno-1', gameId: 'R16-4',  pick: 'a' }, // Holanda
+{ participantId: 'bruno-1', gameId: 'R16-5',  pick: 'a' }, // Portugal
+{ participantId: 'bruno-1', gameId: 'R16-6',  pick: 'a' }, // Espanha
+{ participantId: 'bruno-1', gameId: 'R16-7',  pick: 'a' }, // Estados Unidos
+{ participantId: 'bruno-1', gameId: 'R16-8',  pick: 'b' }, // Senegal
+{ participantId: 'bruno-1', gameId: 'R16-9',  pick: 'a' }, // Brasil
+{ participantId: 'bruno-1', gameId: 'R16-10', pick: 'b' }, // Noruega
+{ participantId: 'bruno-1', gameId: 'R16-11', pick: 'b' }, // Equador
+{ participantId: 'bruno-1', gameId: 'R16-12', pick: 'a' }, // Inglaterra
+{ participantId: 'bruno-1', gameId: 'R16-13', pick: 'a' }, // Argentina
+{ participantId: 'bruno-1', gameId: 'R16-14', pick: 'b' }, // Egito
+{ participantId: 'bruno-1', gameId: 'R16-15', pick: 'b' }, // Argélia
+{ participantId: 'bruno-1', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'bruno', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'bruno', gameId: 'QF-2', pick: 'b' }, // Holanda
-{ participantId: 'bruno', gameId: 'QF-3', pick: 'b' }, // Espanha
-{ participantId: 'bruno', gameId: 'QF-4', pick: 'b' }, // Bélgica
-{ participantId: 'bruno', gameId: 'QF-5', pick: 'b' }, // Noruega
-{ participantId: 'bruno', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'bruno', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'bruno', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'bruno-1', gameId: 'QF-1', pick: 'b' }, // França
+{ participantId: 'bruno-1', gameId: 'QF-2', pick: 'b' }, // Holanda
+{ participantId: 'bruno-1', gameId: 'QF-3', pick: 'b' }, // Espanha
+{ participantId: 'bruno-1', gameId: 'QF-4', pick: 'b' }, // Bélgica
+{ participantId: 'bruno-1', gameId: 'QF-5', pick: 'b' }, // Noruega
+{ participantId: 'bruno-1', gameId: 'QF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'bruno-1', gameId: 'QF-7', pick: 'a' }, // Argentina
+{ participantId: 'bruno-1', gameId: 'QF-8', pick: 'b' }, // Colômbia
 
-{ participantId: 'bruno', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'bruno', gameId: 'SF-2', pick: 'a' }, // Espanha
-{ participantId: 'bruno', gameId: 'SF-3', pick: 'b' }, // Inglaterra
-{ participantId: 'bruno', gameId: 'SF-4', pick: 'b' }, // Argentina
+{ participantId: 'bruno-1', gameId: 'SF-1', pick: 'a' }, // França
+{ participantId: 'bruno-1', gameId: 'SF-2', pick: 'a' }, // Espanha
+{ participantId: 'bruno-1', gameId: 'SF-3', pick: 'b' }, // Inglaterra
+{ participantId: 'bruno-1', gameId: 'SF-4', pick: 'b' }, // Argentina
 
-{ participantId: 'bruno', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'bruno', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+{ participantId: 'bruno-1', gameId: 'SEMI-1', pick: 'a' }, // França
+{ participantId: 'bruno-1', gameId: 'SEMI-2', pick: 'b' }, // Argentina
 
-{ participantId: 'bruno', gameId: 'FINAL', pick: 'a' }, // França campeã
+{ participantId: 'bruno-1', gameId: 'FINAL', pick: 'a' }, // França campeã
 
-// Enio (enio)
-{ participantId: 'enio', gameId: 'R16-1',  pick: 'a' }, // Alemanha
-{ participantId: 'enio', gameId: 'R16-2',  pick: 'a' }, // França
-{ participantId: 'enio', gameId: 'R16-3',  pick: 'b' }, // Canadá
-{ participantId: 'enio', gameId: 'R16-4',  pick: 'a' }, // Holanda
-{ participantId: 'enio', gameId: 'R16-5',  pick: 'a' }, // Portugal
-{ participantId: 'enio', gameId: 'R16-6',  pick: 'a' }, // Espanha
-{ participantId: 'enio', gameId: 'R16-7',  pick: 'a' }, // Estados Unidos
-{ participantId: 'enio', gameId: 'R16-8',  pick: 'b' }, // Senegal
-{ participantId: 'enio', gameId: 'R16-9',  pick: 'a' }, // Brasil
-{ participantId: 'enio', gameId: 'R16-10', pick: 'b' }, // Noruega
-{ participantId: 'enio', gameId: 'R16-11', pick: 'b' }, // Equador
-{ participantId: 'enio', gameId: 'R16-12', pick: 'a' }, // Inglaterra
-{ participantId: 'enio', gameId: 'R16-13', pick: 'a' }, // Argentina
-{ participantId: 'enio', gameId: 'R16-14', pick: 'b' }, // Egito
-{ participantId: 'enio', gameId: 'R16-15', pick: 'b' }, // Argélia
-{ participantId: 'enio', gameId: 'R16-16', pick: 'a' }, // Colômbia
+// Enio (enio-1)
+{ participantId: 'enio-1', gameId: 'R16-1',  pick: 'a' }, // Alemanha
+{ participantId: 'enio-1', gameId: 'R16-2',  pick: 'a' }, // França
+{ participantId: 'enio-1', gameId: 'R16-3',  pick: 'b' }, // Canadá
+{ participantId: 'enio-1', gameId: 'R16-4',  pick: 'a' }, // Holanda
+{ participantId: 'enio-1', gameId: 'R16-5',  pick: 'a' }, // Portugal
+{ participantId: 'enio-1', gameId: 'R16-6',  pick: 'a' }, // Espanha
+{ participantId: 'enio-1', gameId: 'R16-7',  pick: 'a' }, // Estados Unidos
+{ participantId: 'enio-1', gameId: 'R16-8',  pick: 'b' }, // Senegal
+{ participantId: 'enio-1', gameId: 'R16-9',  pick: 'a' }, // Brasil
+{ participantId: 'enio-1', gameId: 'R16-10', pick: 'b' }, // Noruega
+{ participantId: 'enio-1', gameId: 'R16-11', pick: 'b' }, // Equador
+{ participantId: 'enio-1', gameId: 'R16-12', pick: 'a' }, // Inglaterra
+{ participantId: 'enio-1', gameId: 'R16-13', pick: 'a' }, // Argentina
+{ participantId: 'enio-1', gameId: 'R16-14', pick: 'b' }, // Egito
+{ participantId: 'enio-1', gameId: 'R16-15', pick: 'b' }, // Argélia
+{ participantId: 'enio-1', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'enio', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'enio', gameId: 'QF-2', pick: 'b' }, // Marrocos
-{ participantId: 'enio', gameId: 'QF-3', pick: 'a' }, // Portugal
-{ participantId: 'enio', gameId: 'QF-4', pick: 'b' }, // Senegal
-{ participantId: 'enio', gameId: 'QF-5', pick: 'b' }, // Noruega
-{ participantId: 'enio', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'enio', gameId: 'QF-7', pick: 'a' }, // Cabo Verde
-{ participantId: 'enio', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'enio-1', gameId: 'QF-1', pick: 'b' }, // França
+{ participantId: 'enio-1', gameId: 'QF-2', pick: 'b' }, // Marrocos
+{ participantId: 'enio-1', gameId: 'QF-3', pick: 'a' }, // Portugal
+{ participantId: 'enio-1', gameId: 'QF-4', pick: 'b' }, // Senegal
+{ participantId: 'enio-1', gameId: 'QF-5', pick: 'b' }, // Noruega
+{ participantId: 'enio-1', gameId: 'QF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'enio-1', gameId: 'QF-7', pick: 'a' }, // Cabo Verde
+{ participantId: 'enio-1', gameId: 'QF-8', pick: 'b' }, // Colômbia
 
-{ participantId: 'enio', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'enio', gameId: 'SF-2', pick: 'a' }, // Portugal
-{ participantId: 'enio', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'enio', gameId: 'SF-4', pick: 'b' }, // Colômbia
+{ participantId: 'enio-1', gameId: 'SF-1', pick: 'a' }, // França
+{ participantId: 'enio-1', gameId: 'SF-2', pick: 'a' }, // Portugal
+{ participantId: 'enio-1', gameId: 'SF-3', pick: 'a' }, // Brasil
+{ participantId: 'enio-1', gameId: 'SF-4', pick: 'b' }, // Colômbia
 
-{ participantId: 'enio', gameId: 'SEMI-1', pick: 'b' }, // Portugal
-{ participantId: 'enio', gameId: 'SEMI-2', pick: 'a' }, // Brasil
+{ participantId: 'enio-1', gameId: 'SEMI-1', pick: 'b' }, // Portugal
+{ participantId: 'enio-1', gameId: 'SEMI-2', pick: 'a' }, // Brasil
 
-{ participantId: 'enio', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
+{ participantId: 'enio-1', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 
 // Jocelmo (jocelmo)
 { participantId: 'jocelmo', gameId: 'R16-1',  pick: 'a' }, // Alemanha
@@ -416,14 +416,5 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'jorge-fernandes', gameId: 'SEMI-2', pick: 'a' }, // Brasil
 
 { participantId: 'jorge-fernandes', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
-
-
-
-
-
-
-
-
-
 
 ];
