@@ -7,7 +7,7 @@ import { KnockoutGame, KnockoutScore } from '@/lib/types';
 import { calculateKnockoutLeaderboard, resolveLabel, teamDisplay } from '@/lib/knockout_scoring';
 import AvatarImg from '@/components/AvatarImg';
 
-const MEDALS = ['🥇', '🥈', '🥉'];
+const MEDALS = ['🥇'];
 
 // ─── Leaderboard ─────────────────────────────────────────────────────────────
 
@@ -21,7 +21,7 @@ function ScoreCard({
   maxPoints: number;
 }) {
   const pct = maxPoints > 0 ? Math.round((entries[0].points / maxPoints) * 100) : 0;
-  const medal = rank <= 3 ? MEDALS[rank - 1] : null;
+  const medal = rank === 1 ? MEDALS[0] : null;
   const isTop = rank === 1;
 
   return (
