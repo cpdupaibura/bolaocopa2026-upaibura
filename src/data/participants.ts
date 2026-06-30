@@ -31,7 +31,7 @@ export const PARTICIPANTS: Participant[] = [
   { id: 'jorge-fernandes', name: 'Jorge Fernandes',  pdfFile: 'jorge-fernandes.pdf', avatarFile: 'jorge-fernandes.png' },
 ];
 
-const KNOCKOUT_EXCLUDED = new Set(['graca', 'kamilla', 'netinho', 'cleber', 'enio-2', 'bruno-2', 'joao-paulo-2']);
+const KNOCKOUT_EXCLUDED = new Set(['graca', 'kamilla', 'netinho', 'cleber', 'rebeca', 'enio-2', 'bruno-2', 'joao-paulo-2']);
 
 /**
  * Participantes do mata-mata (sem os que saíram, com uma aposta por pessoa).
