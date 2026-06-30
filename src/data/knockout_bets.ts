@@ -236,7 +236,7 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'enio-1', gameId: 'R16-1',  pick: 'a' }, // Alemanha
 { participantId: 'enio-1', gameId: 'R16-2',  pick: 'a' }, // França
 { participantId: 'enio-1', gameId: 'R16-3',  pick: 'b' }, // Canadá
-{ participantId: 'enio-1', gameId: 'R16-4',  pick: 'a' }, // Holanda
+{ participantId: 'enio-1', gameId: 'R16-4',  pick: 'b' }, // Marrocos
 { participantId: 'enio-1', gameId: 'R16-5',  pick: 'a' }, // Portugal
 { participantId: 'enio-1', gameId: 'R16-6',  pick: 'a' }, // Espanha
 { participantId: 'enio-1', gameId: 'R16-7',  pick: 'a' }, // Estados Unidos
