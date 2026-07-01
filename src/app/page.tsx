@@ -139,17 +139,17 @@ function BracketGameCard({
   );
 }
 
-/** Renderiza um bloco de dois jogos R16 que alimentam um QF */
+/** Renderiza um bloco de dois jogos R16 que alimentam um OF */
 function BracketPair({
   r16a,
   r16b,
-  qf,
-  qfLabel,
+  of,
+  ofLabel,
 }: {
   r16a: KnockoutGame;
   r16b: KnockoutGame;
-  qf: KnockoutGame;
-  qfLabel: string;
+  of: KnockoutGame;
+  ofLabel: string;
 }) {
   return (
     <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mb-3">
@@ -165,9 +165,9 @@ function BracketPair({
         <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
       </div>
 
-      {/* QF card */}
+      {/* OF card */}
       <div className="flex items-center">
-        <BracketGameCard game={qf} label={qfLabel} />
+        <BracketGameCard game={of} label={ofLabel} />
       </div>
     </div>
   );
@@ -191,12 +191,12 @@ export default function Home() {
     }
   }
 
-  // QF → SF → SEMI → FINAL mapping
-  const qf = (id: string) => KNOCKOUT_GAMES_BY_ID[id];
+  // OF → QF → SF → FINAL mapping
+  const of = (id: string) => KNOCKOUT_GAMES_BY_ID[id];
   const r16 = (id: string) => KNOCKOUT_GAMES_BY_ID[id];
 
-  // Left bracket: QF1-4 → SF1-2 → SEMI1
-  // Right bracket: QF5-8 → SF3-4 → SEMI2
+  // Left bracket: OF1-4 → QF1-2 → SF1
+  // Right bracket: OF5-8 → QF3-4 → SF2
 
   const totalGames = KNOCKOUT_GAMES.length;
   const playedGames = KNOCKOUT_GAMES.filter((g) => KNOCKOUT_RESULTS[g.id]).length;
@@ -259,44 +259,44 @@ export default function Home() {
             {/* 16 avos → Oitavas (esquerda) */}
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mb-3">
               <div className="flex flex-col gap-3">
-                <BracketPair r16a={r16('R16-1')} r16b={r16('R16-2')} qf={qf('QF-1')} qfLabel="Oitavas 1" />
-                <BracketPair r16a={r16('R16-3')} r16b={r16('R16-4')} qf={qf('QF-2')} qfLabel="Oitavas 2" />
+                <BracketPair r16a={r16('R16-1')} r16b={r16('R16-2')} of={of('OF-1')} ofLabel="Oitavas 1" />
+                <BracketPair r16a={r16('R16-3')} r16b={r16('R16-4')} of={of('OF-2')} ofLabel="Oitavas 2" />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />
                 <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
               </div>
               <div className="flex flex-col gap-3 justify-center">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-1']} label="Quartas 1 · 09/07 17h" />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-1']} label="Quartas 1 · 09/07 17h" />
               </div>
             </div>
 
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mb-3">
               <div className="flex flex-col gap-3">
-                <BracketPair r16a={r16('R16-5')} r16b={r16('R16-6')} qf={qf('QF-3')} qfLabel="Oitavas 3" />
-                <BracketPair r16a={r16('R16-7')} r16b={r16('R16-8')} qf={qf('QF-4')} qfLabel="Oitavas 4" />
+                <BracketPair r16a={r16('R16-5')} r16b={r16('R16-6')} of={of('OF-3')} ofLabel="Oitavas 3" />
+                <BracketPair r16a={r16('R16-7')} r16b={r16('R16-8')} of={of('OF-4')} ofLabel="Oitavas 4" />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />
                 <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
               </div>
               <div className="flex flex-col gap-3 justify-center">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-2']} label="Quartas 2 · 10/07 16h" />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-2']} label="Quartas 2 · 10/07 16h" />
               </div>
             </div>
 
             {/* Quartas → Semifinal 1 */}
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mt-2">
               <div className="flex flex-col gap-3">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-1']} label="Quartas 1" compact />
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-2']} label="Quartas 2" compact />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-1']} label="Quartas 1" compact />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-2']} label="Quartas 2" compact />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />
                 <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
               </div>
               <div className="flex items-center">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SEMI-1']} label="Semifinal 1 · 14/07 16h" />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-1']} label="Semifinal 1 · 14/07 16h" />
               </div>
             </div>
           </div>
@@ -307,44 +307,44 @@ export default function Home() {
 
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mb-3">
               <div className="flex flex-col gap-3">
-                <BracketPair r16a={r16('R16-9')} r16b={r16('R16-10')} qf={qf('QF-5')} qfLabel="Oitavas 5" />
-                <BracketPair r16a={r16('R16-11')} r16b={r16('R16-12')} qf={qf('QF-6')} qfLabel="Oitavas 6" />
+                <BracketPair r16a={r16('R16-9')} r16b={r16('R16-10')} of={of('OF-5')} ofLabel="Oitavas 5" />
+                <BracketPair r16a={r16('R16-11')} r16b={r16('R16-12')} of={of('OF-6')} ofLabel="Oitavas 6" />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />
                 <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
               </div>
               <div className="flex flex-col gap-3 justify-center">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-3']} label="Quartas 3 · 11/07 18h" />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-3']} label="Quartas 3 · 11/07 18h" />
               </div>
             </div>
 
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mb-3">
               <div className="flex flex-col gap-3">
-                <BracketPair r16a={r16('R16-13')} r16b={r16('R16-14')} qf={qf('QF-7')} qfLabel="Oitavas 7" />
-                <BracketPair r16a={r16('R16-15')} r16b={r16('R16-16')} qf={qf('QF-8')} qfLabel="Oitavas 8" />
+                <BracketPair r16a={r16('R16-13')} r16b={r16('R16-14')} of={of('OF-7')} ofLabel="Oitavas 7" />
+                <BracketPair r16a={r16('R16-15')} r16b={r16('R16-16')} of={of('OF-8')} ofLabel="Oitavas 8" />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />
                 <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
               </div>
               <div className="flex flex-col gap-3 justify-center">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-4']} label="Quartas 4 · 11/07 22h" />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-4']} label="Quartas 4 · 11/07 22h" />
               </div>
             </div>
 
             {/* Quartas → Semifinal 2 */}
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mt-2">
               <div className="flex flex-col gap-3">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-3']} label="Quartas 3" compact />
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-4']} label="Quartas 4" compact />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-3']} label="Quartas 3" compact />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['QF-4']} label="Quartas 4" compact />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />
                 <div className="flex-1 border-r border-b border-slate-700 rounded-br" />
               </div>
               <div className="flex items-center">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SEMI-2']} label="Semifinal 2 · 15/07 16h" />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-2']} label="Semifinal 2 · 15/07 16h" />
               </div>
             </div>
           </div>
@@ -354,8 +354,8 @@ export default function Home() {
             <p className="text-slate-600 text-[10px] uppercase tracking-widest mb-3 font-semibold">Final</p>
             <div className="grid grid-cols-[1fr_6px_1fr] gap-x-0 items-stretch mb-3">
               <div className="flex flex-col gap-3">
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SEMI-1']} label="Semifinal 1" compact />
-                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SEMI-2']} label="Semifinal 2" compact />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-1']} label="Semifinal 1" compact />
+                <BracketGameCard game={KNOCKOUT_GAMES_BY_ID['SF-2']} label="Semifinal 2" compact />
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex-1 border-r border-t border-slate-700 rounded-tr" />

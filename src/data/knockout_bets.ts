@@ -28,22 +28,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'ionaldo-jr', gameId: 'R16-15', pick: 'a' }, // Suíça
   { participantId: 'ionaldo-jr', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-  { participantId: 'ionaldo-jr', gameId: 'QF-1', pick: 'b' }, // França
-  { participantId: 'ionaldo-jr', gameId: 'QF-2', pick: 'b' }, // Marrocos
-  { participantId: 'ionaldo-jr', gameId: 'QF-3', pick: 'b' }, // Espanha
-  { participantId: 'ionaldo-jr', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-  { participantId: 'ionaldo-jr', gameId: 'QF-5', pick: 'a' }, // Brasil
-  { participantId: 'ionaldo-jr', gameId: 'QF-6', pick: 'a' }, // México
-  { participantId: 'ionaldo-jr', gameId: 'QF-7', pick: 'a' }, // Argentina
-  { participantId: 'ionaldo-jr', gameId: 'QF-8', pick: 'b' }, // Colômbia
+  { participantId: 'ionaldo-jr', gameId: 'OF-1', pick: 'b' }, // França
+  { participantId: 'ionaldo-jr', gameId: 'OF-2', pick: 'b' }, // Marrocos
+  { participantId: 'ionaldo-jr', gameId: 'OF-3', pick: 'b' }, // Espanha
+  { participantId: 'ionaldo-jr', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+  { participantId: 'ionaldo-jr', gameId: 'OF-5', pick: 'a' }, // Brasil
+  { participantId: 'ionaldo-jr', gameId: 'OF-6', pick: 'a' }, // México
+  { participantId: 'ionaldo-jr', gameId: 'OF-7', pick: 'a' }, // Argentina
+  { participantId: 'ionaldo-jr', gameId: 'OF-8', pick: 'b' }, // Colômbia
 
-  { participantId: 'ionaldo-jr', gameId: 'SF-1', pick: 'a' }, // França
-  { participantId: 'ionaldo-jr', gameId: 'SF-2', pick: 'a' }, // Espanha
-  { participantId: 'ionaldo-jr', gameId: 'SF-3', pick: 'a' }, // Brasil
-  { participantId: 'ionaldo-jr', gameId: 'SF-4', pick: 'a' }, // Argentina
+  { participantId: 'ionaldo-jr', gameId: 'QF-1', pick: 'a' }, // França
+  { participantId: 'ionaldo-jr', gameId: 'QF-2', pick: 'a' }, // Espanha
+  { participantId: 'ionaldo-jr', gameId: 'QF-3', pick: 'a' }, // Brasil
+  { participantId: 'ionaldo-jr', gameId: 'QF-4', pick: 'a' }, // Argentina
 
-  { participantId: 'ionaldo-jr', gameId: 'SEMI-1', pick: 'b' }, // Espanha
-  { participantId: 'ionaldo-jr', gameId: 'SEMI-2', pick: 'a' }, // Brasil
+  { participantId: 'ionaldo-jr', gameId: 'SF-1', pick: 'b' }, // Espanha
+  { participantId: 'ionaldo-jr', gameId: 'SF-2', pick: 'a' }, // Brasil
 
   { participantId: 'ionaldo-jr', gameId: 'FINAL', pick: 'b' }, // Brasil campeão
 
@@ -65,22 +65,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'jorge-edson', gameId: 'R16-15', pick: 'a' }, // Suíça
   { participantId: 'jorge-edson', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-  { participantId: 'jorge-edson', gameId: 'QF-1', pick: 'b' }, // França
-  { participantId: 'jorge-edson', gameId: 'QF-2', pick: 'b' }, // Marrocos
-  { participantId: 'jorge-edson', gameId: 'QF-3', pick: 'b' }, // Espanha
-  { participantId: 'jorge-edson', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-  { participantId: 'jorge-edson', gameId: 'QF-5', pick: 'b' }, // Noruega
-  { participantId: 'jorge-edson', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-  { participantId: 'jorge-edson', gameId: 'QF-7', pick: 'a' }, // Argentina
-  { participantId: 'jorge-edson', gameId: 'QF-8', pick: 'b' }, // Colômbia
+  { participantId: 'jorge-edson', gameId: 'OF-1', pick: 'b' }, // França
+  { participantId: 'jorge-edson', gameId: 'OF-2', pick: 'b' }, // Marrocos
+  { participantId: 'jorge-edson', gameId: 'OF-3', pick: 'b' }, // Espanha
+  { participantId: 'jorge-edson', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+  { participantId: 'jorge-edson', gameId: 'OF-5', pick: 'b' }, // Noruega
+  { participantId: 'jorge-edson', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+  { participantId: 'jorge-edson', gameId: 'OF-7', pick: 'a' }, // Argentina
+  { participantId: 'jorge-edson', gameId: 'OF-8', pick: 'b' }, // Colômbia
+
+  { participantId: 'jorge-edson', gameId: 'QF-1', pick: 'a' }, // França
+  { participantId: 'jorge-edson', gameId: 'QF-2', pick: 'a' }, // Espanha
+  { participantId: 'jorge-edson', gameId: 'QF-3', pick: 'b' }, // Inglaterra
+  { participantId: 'jorge-edson', gameId: 'QF-4', pick: 'a' }, // Argentina
 
   { participantId: 'jorge-edson', gameId: 'SF-1', pick: 'a' }, // França
-  { participantId: 'jorge-edson', gameId: 'SF-2', pick: 'a' }, // Espanha
-  { participantId: 'jorge-edson', gameId: 'SF-3', pick: 'b' }, // Inglaterra
-  { participantId: 'jorge-edson', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-  { participantId: 'jorge-edson', gameId: 'SEMI-1', pick: 'a' }, // França
-  { participantId: 'jorge-edson', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+  { participantId: 'jorge-edson', gameId: 'SF-2', pick: 'b' }, // Argentina
 
   { participantId: 'jorge-edson', gameId: 'FINAL', pick: 'a' }, // França campeã
 
@@ -102,22 +102,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'eduardo-alex', gameId: 'R16-15', pick: 'a' }, // Suíça
   { participantId: 'eduardo-alex', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-  { participantId: 'eduardo-alex', gameId: 'QF-1', pick: 'b' }, // França
-  { participantId: 'eduardo-alex', gameId: 'QF-2', pick: 'b' }, // Holanda
-  { participantId: 'eduardo-alex', gameId: 'QF-3', pick: 'a' }, // Portugal
-  { participantId: 'eduardo-alex', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-  { participantId: 'eduardo-alex', gameId: 'QF-5', pick: 'a' }, // Brasil
-  { participantId: 'eduardo-alex', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-  { participantId: 'eduardo-alex', gameId: 'QF-7', pick: 'a' }, // Argentina
-  { participantId: 'eduardo-alex', gameId: 'QF-8', pick: 'b' }, // Colômbia
+  { participantId: 'eduardo-alex', gameId: 'OF-1', pick: 'b' }, // França
+  { participantId: 'eduardo-alex', gameId: 'OF-2', pick: 'b' }, // Holanda
+  { participantId: 'eduardo-alex', gameId: 'OF-3', pick: 'a' }, // Portugal
+  { participantId: 'eduardo-alex', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+  { participantId: 'eduardo-alex', gameId: 'OF-5', pick: 'a' }, // Brasil
+  { participantId: 'eduardo-alex', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+  { participantId: 'eduardo-alex', gameId: 'OF-7', pick: 'a' }, // Argentina
+  { participantId: 'eduardo-alex', gameId: 'OF-8', pick: 'b' }, // Colômbia
+
+  { participantId: 'eduardo-alex', gameId: 'QF-1', pick: 'a' }, // França
+  { participantId: 'eduardo-alex', gameId: 'QF-2', pick: 'a' }, // Portugal
+  { participantId: 'eduardo-alex', gameId: 'QF-3', pick: 'a' }, // Brasil
+  { participantId: 'eduardo-alex', gameId: 'QF-4', pick: 'a' }, // Argentina
 
   { participantId: 'eduardo-alex', gameId: 'SF-1', pick: 'a' }, // França
-  { participantId: 'eduardo-alex', gameId: 'SF-2', pick: 'a' }, // Portugal
-  { participantId: 'eduardo-alex', gameId: 'SF-3', pick: 'a' }, // Brasil
-  { participantId: 'eduardo-alex', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-  { participantId: 'eduardo-alex', gameId: 'SEMI-1', pick: 'a' }, // França
-  { participantId: 'eduardo-alex', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+  { participantId: 'eduardo-alex', gameId: 'SF-2', pick: 'b' }, // Argentina
 
   { participantId: 'eduardo-alex', gameId: 'FINAL', pick: 'a' }, // França campeã
 
@@ -139,22 +139,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'joao-paulo-1', gameId: 'R16-15', pick: 'a' }, // Suíça
 { participantId: 'joao-paulo-1', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'joao-paulo-1', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'joao-paulo-1', gameId: 'QF-2', pick: 'b' }, // Marrocos
-{ participantId: 'joao-paulo-1', gameId: 'QF-3', pick: 'b' }, // Espanha
-{ participantId: 'joao-paulo-1', gameId: 'QF-4', pick: 'b' }, // Bélgica
-{ participantId: 'joao-paulo-1', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'joao-paulo-1', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'joao-paulo-1', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'joao-paulo-1', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'joao-paulo-1', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'OF-2', pick: 'b' }, // Marrocos
+{ participantId: 'joao-paulo-1', gameId: 'OF-3', pick: 'b' }, // Espanha
+{ participantId: 'joao-paulo-1', gameId: 'OF-4', pick: 'b' }, // Bélgica
+{ participantId: 'joao-paulo-1', gameId: 'OF-5', pick: 'a' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'joao-paulo-1', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'joao-paulo-1', gameId: 'OF-8', pick: 'b' }, // Colômbia
 
-{ participantId: 'joao-paulo-1', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'joao-paulo-1', gameId: 'SF-2', pick: 'a' }, // Espanha
-{ participantId: 'joao-paulo-1', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'joao-paulo-1', gameId: 'SF-4', pick: 'a' }, // Argentina
+{ participantId: 'joao-paulo-1', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'QF-2', pick: 'a' }, // Espanha
+{ participantId: 'joao-paulo-1', gameId: 'QF-3', pick: 'a' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'QF-4', pick: 'a' }, // Argentina
 
-{ participantId: 'joao-paulo-1', gameId: 'SEMI-1', pick: 'b' }, // Brasil
-{ participantId: 'joao-paulo-1', gameId: 'SEMI-2', pick: 'a' }, // França
+{ participantId: 'joao-paulo-1', gameId: 'SF-1', pick: 'b' }, // Brasil
+{ participantId: 'joao-paulo-1', gameId: 'SF-2', pick: 'a' }, // França
 
 { participantId: 'joao-paulo-1', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 
@@ -176,22 +176,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'igor', gameId: 'R16-15', pick: 'b' }, // Argélia
 { participantId: 'igor', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'igor', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'igor', gameId: 'QF-2', pick: 'b' }, // Holanda
-{ participantId: 'igor', gameId: 'QF-3', pick: 'b' }, // Espanha
-{ participantId: 'igor', gameId: 'QF-4', pick: 'b' }, // Senegal
-{ participantId: 'igor', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'igor', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'igor', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'igor', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'igor', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'igor', gameId: 'OF-2', pick: 'b' }, // Holanda
+{ participantId: 'igor', gameId: 'OF-3', pick: 'b' }, // Espanha
+{ participantId: 'igor', gameId: 'OF-4', pick: 'b' }, // Senegal
+{ participantId: 'igor', gameId: 'OF-5', pick: 'a' }, // Brasil
+{ participantId: 'igor', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'igor', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'igor', gameId: 'OF-8', pick: 'b' }, // Colômbia
+
+{ participantId: 'igor', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'igor', gameId: 'QF-2', pick: 'a' }, // Espanha
+{ participantId: 'igor', gameId: 'QF-3', pick: 'a' }, // Brasil
+{ participantId: 'igor', gameId: 'QF-4', pick: 'a' }, // Argentina
 
 { participantId: 'igor', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'igor', gameId: 'SF-2', pick: 'a' }, // Espanha
-{ participantId: 'igor', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'igor', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-{ participantId: 'igor', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'igor', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+{ participantId: 'igor', gameId: 'SF-2', pick: 'b' }, // Argentina
 
 { participantId: 'igor', gameId: 'FINAL', pick: 'a' }, // França campeã
 
@@ -213,22 +213,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'bruno-1', gameId: 'R16-15', pick: 'b' }, // Argélia
 { participantId: 'bruno-1', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'bruno-1', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'bruno-1', gameId: 'QF-2', pick: 'b' }, // Holanda
-{ participantId: 'bruno-1', gameId: 'QF-3', pick: 'b' }, // Espanha
-{ participantId: 'bruno-1', gameId: 'QF-4', pick: 'b' }, // Bélgica
-{ participantId: 'bruno-1', gameId: 'QF-5', pick: 'b' }, // Noruega
-{ participantId: 'bruno-1', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'bruno-1', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'bruno-1', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'bruno-1', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'bruno-1', gameId: 'OF-2', pick: 'b' }, // Holanda
+{ participantId: 'bruno-1', gameId: 'OF-3', pick: 'b' }, // Espanha
+{ participantId: 'bruno-1', gameId: 'OF-4', pick: 'b' }, // Bélgica
+{ participantId: 'bruno-1', gameId: 'OF-5', pick: 'b' }, // Noruega
+{ participantId: 'bruno-1', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'bruno-1', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'bruno-1', gameId: 'OF-8', pick: 'b' }, // Colômbia
+
+{ participantId: 'bruno-1', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'bruno-1', gameId: 'QF-2', pick: 'a' }, // Espanha
+{ participantId: 'bruno-1', gameId: 'QF-3', pick: 'b' }, // Inglaterra
+{ participantId: 'bruno-1', gameId: 'QF-4', pick: 'a' }, // Argentina
 
 { participantId: 'bruno-1', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'bruno-1', gameId: 'SF-2', pick: 'a' }, // Espanha
-{ participantId: 'bruno-1', gameId: 'SF-3', pick: 'b' }, // Inglaterra
-{ participantId: 'bruno-1', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-{ participantId: 'bruno-1', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'bruno-1', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+{ participantId: 'bruno-1', gameId: 'SF-2', pick: 'b' }, // Argentina
 
 { participantId: 'bruno-1', gameId: 'FINAL', pick: 'a' }, // França campeã
 
@@ -250,22 +250,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'enio-1', gameId: 'R16-15', pick: 'b' }, // Argélia
 { participantId: 'enio-1', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'enio-1', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'enio-1', gameId: 'QF-2', pick: 'b' }, // Marrocos
-{ participantId: 'enio-1', gameId: 'QF-3', pick: 'a' }, // Portugal
-{ participantId: 'enio-1', gameId: 'QF-4', pick: 'b' }, // Senegal
-{ participantId: 'enio-1', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'enio-1', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'enio-1', gameId: 'QF-7', pick: 'a' }, // Cabo Verde
-{ participantId: 'enio-1', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'enio-1', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'enio-1', gameId: 'OF-2', pick: 'b' }, // Marrocos
+{ participantId: 'enio-1', gameId: 'OF-3', pick: 'a' }, // Portugal
+{ participantId: 'enio-1', gameId: 'OF-4', pick: 'b' }, // Senegal
+{ participantId: 'enio-1', gameId: 'OF-5', pick: 'a' }, // Brasil
+{ participantId: 'enio-1', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'enio-1', gameId: 'OF-7', pick: 'a' }, // Cabo Verde
+{ participantId: 'enio-1', gameId: 'OF-8', pick: 'b' }, // Colômbia
 
-{ participantId: 'enio-1', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'enio-1', gameId: 'SF-2', pick: 'a' }, // Portugal
-{ participantId: 'enio-1', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'enio-1', gameId: 'SF-4', pick: 'b' }, // Colômbia
+{ participantId: 'enio-1', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'enio-1', gameId: 'QF-2', pick: 'a' }, // Portugal
+{ participantId: 'enio-1', gameId: 'QF-3', pick: 'a' }, // Brasil
+{ participantId: 'enio-1', gameId: 'QF-4', pick: 'b' }, // Colômbia
 
-{ participantId: 'enio-1', gameId: 'SEMI-1', pick: 'b' }, // Portugal
-{ participantId: 'enio-1', gameId: 'SEMI-2', pick: 'a' }, // Brasil
+{ participantId: 'enio-1', gameId: 'SF-1', pick: 'b' }, // Portugal
+{ participantId: 'enio-1', gameId: 'SF-2', pick: 'a' }, // Brasil
 
 { participantId: 'enio-1', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 
@@ -287,22 +287,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'jocelmo', gameId: 'R16-15', pick: 'a' }, // Suíça
 { participantId: 'jocelmo', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'jocelmo', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'jocelmo', gameId: 'QF-2', pick: 'a' }, // África do Sul
-{ participantId: 'jocelmo', gameId: 'QF-3', pick: 'a' }, // Portugal
-{ participantId: 'jocelmo', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-{ participantId: 'jocelmo', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'jocelmo', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'jocelmo', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'jocelmo', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'jocelmo', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'jocelmo', gameId: 'OF-2', pick: 'a' }, // África do Sul
+{ participantId: 'jocelmo', gameId: 'OF-3', pick: 'a' }, // Portugal
+{ participantId: 'jocelmo', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+{ participantId: 'jocelmo', gameId: 'OF-5', pick: 'a' }, // Brasil
+{ participantId: 'jocelmo', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'jocelmo', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'jocelmo', gameId: 'OF-8', pick: 'b' }, // Colômbia
+
+{ participantId: 'jocelmo', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'jocelmo', gameId: 'QF-2', pick: 'b' }, // Bélgica
+{ participantId: 'jocelmo', gameId: 'QF-3', pick: 'a' }, // Brasil
+{ participantId: 'jocelmo', gameId: 'QF-4', pick: 'a' }, // Argentina
 
 { participantId: 'jocelmo', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'jocelmo', gameId: 'SF-2', pick: 'b' }, // Bélgica
-{ participantId: 'jocelmo', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'jocelmo', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-{ participantId: 'jocelmo', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'jocelmo', gameId: 'SEMI-2', pick: 'a' }, // Brasil
+{ participantId: 'jocelmo', gameId: 'SF-2', pick: 'a' }, // Brasil
 
 { participantId: 'jocelmo', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 
@@ -324,22 +324,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'diego', gameId: 'R16-15', pick: 'a' }, // Suíça
 { participantId: 'diego', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'diego', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'diego', gameId: 'QF-2', pick: 'b' }, // Marrocos
-{ participantId: 'diego', gameId: 'QF-3', pick: 'a' }, // Portugal
-{ participantId: 'diego', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-{ participantId: 'diego', gameId: 'QF-5', pick: 'b' }, // Noruega
-{ participantId: 'diego', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'diego', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'diego', gameId: 'QF-8', pick: 'b' }, // Colômbia
+{ participantId: 'diego', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'diego', gameId: 'OF-2', pick: 'b' }, // Marrocos
+{ participantId: 'diego', gameId: 'OF-3', pick: 'a' }, // Portugal
+{ participantId: 'diego', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+{ participantId: 'diego', gameId: 'OF-5', pick: 'b' }, // Noruega
+{ participantId: 'diego', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'diego', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'diego', gameId: 'OF-8', pick: 'b' }, // Colômbia
+
+{ participantId: 'diego', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'diego', gameId: 'QF-2', pick: 'a' }, // Espanha
+{ participantId: 'diego', gameId: 'QF-3', pick: 'b' }, // Inglaterra
+{ participantId: 'diego', gameId: 'QF-4', pick: 'a' }, // Argentina
 
 { participantId: 'diego', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'diego', gameId: 'SF-2', pick: 'a' }, // Espanha
-{ participantId: 'diego', gameId: 'SF-3', pick: 'b' }, // Inglaterra
-{ participantId: 'diego', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-{ participantId: 'diego', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'diego', gameId: 'SEMI-2', pick: 'b' }, // Argentina
+{ participantId: 'diego', gameId: 'SF-2', pick: 'b' }, // Argentina
 
 { participantId: 'diego', gameId: 'FINAL', pick: 'b' }, // Argentina campeã
 
@@ -361,22 +361,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'rosinaldo', gameId: 'R16-15', pick: 'b' }, // Argélia
 { participantId: 'rosinaldo', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'rosinaldo', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'rosinaldo', gameId: 'QF-2', pick: 'b' }, // Holanda
-{ participantId: 'rosinaldo', gameId: 'QF-3', pick: 'a' }, // Portugal
-{ participantId: 'rosinaldo', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-{ participantId: 'rosinaldo', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'rosinaldo', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'rosinaldo', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'rosinaldo', gameId: 'QF-8', pick: 'a' }, // Argélia
+{ participantId: 'rosinaldo', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'rosinaldo', gameId: 'OF-2', pick: 'b' }, // Holanda
+{ participantId: 'rosinaldo', gameId: 'OF-3', pick: 'a' }, // Portugal
+{ participantId: 'rosinaldo', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+{ participantId: 'rosinaldo', gameId: 'OF-5', pick: 'a' }, // Brasil
+{ participantId: 'rosinaldo', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'rosinaldo', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'rosinaldo', gameId: 'OF-8', pick: 'a' }, // Argélia
+
+{ participantId: 'rosinaldo', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'rosinaldo', gameId: 'QF-2', pick: 'a' }, // Portugal
+{ participantId: 'rosinaldo', gameId: 'QF-3', pick: 'a' }, // Brasil
+{ participantId: 'rosinaldo', gameId: 'QF-4', pick: 'b' }, // Colômbia
 
 { participantId: 'rosinaldo', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'rosinaldo', gameId: 'SF-2', pick: 'a' }, // Portugal
-{ participantId: 'rosinaldo', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'rosinaldo', gameId: 'SF-4', pick: 'b' }, // Colômbia
-
-{ participantId: 'rosinaldo', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'rosinaldo', gameId: 'SEMI-2', pick: 'a' }, // Brasil
+{ participantId: 'rosinaldo', gameId: 'SF-2', pick: 'a' }, // Brasil
 
 { participantId: 'rosinaldo', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 
@@ -398,22 +398,22 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
 { participantId: 'jorge-fernandes', gameId: 'R16-15', pick: 'a' }, // Suíça
 { participantId: 'jorge-fernandes', gameId: 'R16-16', pick: 'a' }, // Colômbia
 
-{ participantId: 'jorge-fernandes', gameId: 'QF-1', pick: 'b' }, // França
-{ participantId: 'jorge-fernandes', gameId: 'QF-2', pick: 'b' }, // Marrocos
-{ participantId: 'jorge-fernandes', gameId: 'QF-3', pick: 'b' }, // Espanha
-{ participantId: 'jorge-fernandes', gameId: 'QF-4', pick: 'a' }, // Estados Unidos
-{ participantId: 'jorge-fernandes', gameId: 'QF-5', pick: 'a' }, // Brasil
-{ participantId: 'jorge-fernandes', gameId: 'QF-6', pick: 'b' }, // Inglaterra
-{ participantId: 'jorge-fernandes', gameId: 'QF-7', pick: 'a' }, // Argentina
-{ participantId: 'jorge-fernandes', gameId: 'QF-8', pick: 'a' }, // Suíça
+{ participantId: 'jorge-fernandes', gameId: 'OF-1', pick: 'b' }, // França
+{ participantId: 'jorge-fernandes', gameId: 'OF-2', pick: 'b' }, // Marrocos
+{ participantId: 'jorge-fernandes', gameId: 'OF-3', pick: 'b' }, // Espanha
+{ participantId: 'jorge-fernandes', gameId: 'OF-4', pick: 'a' }, // Estados Unidos
+{ participantId: 'jorge-fernandes', gameId: 'OF-5', pick: 'a' }, // Brasil
+{ participantId: 'jorge-fernandes', gameId: 'OF-6', pick: 'b' }, // Inglaterra
+{ participantId: 'jorge-fernandes', gameId: 'OF-7', pick: 'a' }, // Argentina
+{ participantId: 'jorge-fernandes', gameId: 'OF-8', pick: 'a' }, // Suíça
+
+{ participantId: 'jorge-fernandes', gameId: 'QF-1', pick: 'a' }, // França
+{ participantId: 'jorge-fernandes', gameId: 'QF-2', pick: 'a' }, // Espanha
+{ participantId: 'jorge-fernandes', gameId: 'QF-3', pick: 'a' }, // Brasil
+{ participantId: 'jorge-fernandes', gameId: 'QF-4', pick: 'a' }, // Argentina
 
 { participantId: 'jorge-fernandes', gameId: 'SF-1', pick: 'a' }, // França
-{ participantId: 'jorge-fernandes', gameId: 'SF-2', pick: 'a' }, // Espanha
-{ participantId: 'jorge-fernandes', gameId: 'SF-3', pick: 'a' }, // Brasil
-{ participantId: 'jorge-fernandes', gameId: 'SF-4', pick: 'a' }, // Argentina
-
-{ participantId: 'jorge-fernandes', gameId: 'SEMI-1', pick: 'a' }, // França
-{ participantId: 'jorge-fernandes', gameId: 'SEMI-2', pick: 'a' }, // Brasil
+{ participantId: 'jorge-fernandes', gameId: 'SF-2', pick: 'a' }, // Brasil
 
 { participantId: 'jorge-fernandes', gameId: 'FINAL', pick: 'b' }, // Brasil campeã
 

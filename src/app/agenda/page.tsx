@@ -17,9 +17,9 @@ function parseLabel(iso: string) {
 function gameShortId(game: KnockoutGame): string {
   return game.id
     .replace('R16-', 'J')
-    .replace('QF-', 'Oit.')
-    .replace('SF-', 'Qrt.')
-    .replace('SEMI-', 'Semi ')
+    .replace('OF-', 'Oit.')
+    .replace('QF-', 'Qrt.')
+    .replace('SF-', 'Semi ')
     .replace('FINAL', 'Final')
     .replace('TP', '3º');
 }
@@ -61,7 +61,7 @@ function tpSlotTeam(
   const semiGame = KNOCKOUT_GAMES_BY_ID[semiId];
   const semiResult = results[semiId];
   if (!semiResult || !semiGame) {
-    return { flag: '', name: semiId === 'SEMI-1' ? 'Perd. Semifinal 1' : 'Perd. Semifinal 2' };
+    return { flag: '', name: semiId === 'SF-1' ? 'Perd. Semifinal 1' : 'Perd. Semifinal 2' };
   }
   // Perdedor = o outro lado de quem venceu
   const losingSide: 'home' | 'away' = semiResult === 'a' ? 'away' : 'home';
@@ -91,8 +91,8 @@ export default function AgendaPage() {
         let away: { flag: string; name: string };
 
         if (g.round === 'tp') {
-          home = tpSlotTeam('SEMI-1', results);
-          away = tpSlotTeam('SEMI-2', results);
+          home = tpSlotTeam('SF-1', results);
+          away = tpSlotTeam('SF-2', results);
         } else {
           home = slotTeam(g, 'home', results);
           away = slotTeam(g, 'away', results);

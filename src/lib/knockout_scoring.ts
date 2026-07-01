@@ -5,7 +5,7 @@ import { TEAMS } from '../data/teams';
 /**
  * Verifica se o apostador acertou o confronto exato do jogo (ambas as seleções corretas).
  * Para R16, o confronto é sempre fixo → sempre verdadeiro.
- * Para QF em diante, o confronto é correto somente se o apostador acertou
+ * Para OF em diante, o confronto é correto somente se o apostador acertou
  * o resultado E o confronto de CADA jogo-fonte que alimenta este confronto.
  */
 export function isConfrontoCorrect(

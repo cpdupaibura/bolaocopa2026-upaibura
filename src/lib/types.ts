@@ -59,7 +59,7 @@ export interface ParticipantScore {
   gamesWithBets: number;
 }
 
-export type KnockoutRound = 'r16' | 'qf' | 'sf' | 'semi' | 'tp' | 'final';
+export type KnockoutRound = 'r16' | 'of' | 'qf' | 'sf' | 'tp' | 'final';
 
 export interface KnockoutGame {
   id: string;

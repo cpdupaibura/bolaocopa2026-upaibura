@@ -32,7 +32,7 @@ function resolveTeam(
     return { name: team?.name ?? '?', flag: team?.flag ?? '' };
   }
 
-  // For QF+: winner's identity comes from their source game
+  // For OF+: winner's identity comes from their source game
   const nextSourceId = winner === 'a' ? game.homeSource : game.awaySource;
   return resolveTeam(nextSourceId, bets, results);
 }
@@ -158,9 +158,9 @@ function BracketNode({
 }) {
   const roundLabel: Record<string, string> = {
     r16: `J${game.id.replace('R16-', '')}`,
-    qf: `Oit.${game.id.replace('QF-', '')}`,
-    sf: `Qrt.${game.id.replace('SF-', '')}`,
-    semi: `Semi ${game.id.replace('SEMI-', '')}`,
+    of: `Oit.${game.id.replace('OF-', '')}`,
+    qf: `Qrt.${game.id.replace('QF-', '')}`,
+    sf: `Semi ${game.id.replace('SF-', '')}`,
     final: 'Final',
     tp: '3º',
   };
@@ -261,8 +261,8 @@ export default function ChaveContent() {
     setSelectedId((prev) => (prev === id ? null : id));
   }
 
-  const semi1 = KNOCKOUT_GAMES_BY_ID['SEMI-1'];
-  const semi2 = KNOCKOUT_GAMES_BY_ID['SEMI-2'];
+  const semi1 = KNOCKOUT_GAMES_BY_ID['SF-1'];
+  const semi2 = KNOCKOUT_GAMES_BY_ID['SF-2'];
   const final = KNOCKOUT_GAMES_BY_ID['FINAL'];
   const tp = KNOCKOUT_GAMES_BY_ID['TP'];
 
@@ -337,14 +337,14 @@ export default function ChaveContent() {
           <div className="flex items-stretch gap-0">
             <div className="flex flex-col w-[112px] shrink-0">
               <BracketCard
-                game={KNOCKOUT_GAMES_BY_ID['SEMI-1']}
+                game={KNOCKOUT_GAMES_BY_ID['SF-1']}
                 bets={betsMap}
                 results={KNOCKOUT_RESULTS}
                 label="Semi 1"
               />
               <div className="h-1" />
               <BracketCard
-                game={KNOCKOUT_GAMES_BY_ID['SEMI-2']}
+                game={KNOCKOUT_GAMES_BY_ID['SF-2']}
                 bets={betsMap}
                 results={KNOCKOUT_RESULTS}
                 label="Semi 2"
