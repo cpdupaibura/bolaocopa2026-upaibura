@@ -83,6 +83,7 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'jorge-edson', gameId: 'SF-1', pick: 'a' }, // França
   { participantId: 'jorge-edson', gameId: 'SF-2', pick: 'b' }, // Argentina
 
+  { participantId: 'jorge-edson', gameId: 'TP', pick: 'b' }, // Inglaterra
   { participantId: 'jorge-edson', gameId: 'FINAL', pick: 'a' }, // França campeã
 
   // Eduardo Alex (eduardo-alex)
