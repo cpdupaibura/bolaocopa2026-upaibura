@@ -45,7 +45,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'ionaldo-jr', gameId: 'SF-1',   pick: 'b' }, // Espanha
   { participantId: 'ionaldo-jr', gameId: 'SF-2',   pick: 'a' }, // Brasil
 
-  { participantId: 'ionaldo-jr', gameId: 'TP',     pick: 'a' }, // França
   { participantId: 'ionaldo-jr', gameId: 'FINAL',  pick: 'b' }, // Brasil
 
   // Jorginho (jorge-edson)
@@ -83,7 +82,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'jorge-edson', gameId: 'SF-1', pick: 'a' }, // França
   { participantId: 'jorge-edson', gameId: 'SF-2', pick: 'b' }, // Argentina
 
-  { participantId: 'jorge-edson', gameId: 'TP', pick: 'b' }, // Inglaterra
   { participantId: 'jorge-edson', gameId: 'FINAL', pick: 'a' }, // França campeã
 
   // Eduardo Alex (eduardo-alex)
@@ -121,7 +119,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'eduardo-alex', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'eduardo-alex', gameId: 'SF-2',   pick: 'b' }, // Argentina
 
-  { participantId: 'eduardo-alex', gameId: 'TP',     pick: 'b' }, // Brasil
   { participantId: 'eduardo-alex', gameId: 'FINAL',  pick: 'a' }, // França
 
   // João Paulo (joao-paulo-1)
@@ -159,7 +156,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'joao-paulo-1', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'joao-paulo-1', gameId: 'SF-2',   pick: 'a' }, // Brasil
 
-  { participantId: 'joao-paulo-1', gameId: 'TP',     pick: 'a' }, // Espanha
   { participantId: 'joao-paulo-1', gameId: 'FINAL',  pick: 'b' }, // Brasil
 
   // Igor (igor)
@@ -197,7 +193,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'igor', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'igor', gameId: 'SF-2',   pick: 'b' }, // Argentina
 
-  { participantId: 'igor', gameId: 'TP',     pick: 'b' }, // Brasil
   { participantId: 'igor', gameId: 'FINAL',  pick: 'a' }, // França
 
   // Bruno (bruno-1)
@@ -235,7 +230,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'bruno-1', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'bruno-1', gameId: 'SF-2',   pick: 'b' }, // Argentina
 
-  { participantId: 'bruno-1', gameId: 'TP',     pick: 'b' }, // Inglaterra
   { participantId: 'bruno-1', gameId: 'FINAL',  pick: 'a' }, // França
 
   // Enio (enio-1)
@@ -273,7 +267,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'enio-1', gameId: 'SF-1',   pick: 'b' }, // Portugal
   { participantId: 'enio-1', gameId: 'SF-2',   pick: 'a' }, // Brasil
 
-  { participantId: 'enio-1', gameId: 'TP',     pick: 'a' }, // França
   { participantId: 'enio-1', gameId: 'FINAL',  pick: 'b' }, // Brasil
 
   // Jocelmo (jocelmo)
@@ -311,7 +304,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'jocelmo', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'jocelmo', gameId: 'SF-2',   pick: 'a' }, // Brasil
 
-  { participantId: 'jocelmo', gameId: 'TP',     pick: 'a' }, // Bélgica
   { participantId: 'jocelmo', gameId: 'FINAL',  pick: 'b' }, // Brasil
 
   // Diego (diego)
@@ -349,7 +341,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'diego', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'diego', gameId: 'SF-2',   pick: 'b' }, // Argentina
 
-  { participantId: 'diego', gameId: 'TP',     pick: 'b' }, // Inglaterra
   { participantId: 'diego', gameId: 'FINAL',  pick: 'b' }, // Argentina
 
   // Rosinaldo (rosinaldo)
@@ -387,7 +378,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'rosinaldo', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'rosinaldo', gameId: 'SF-2',   pick: 'a' }, // Brasil
 
-  { participantId: 'rosinaldo', gameId: 'TP',     pick: 'a' }, // Portugal
   { participantId: 'rosinaldo', gameId: 'FINAL',  pick: 'b' }, // Brasil
 
   // Jorge Fernandes (jorge-fernandes)
@@ -425,7 +415,6 @@ export const KNOCKOUT_BETS: KnockoutBet[] = [
   { participantId: 'jorge-fernandes', gameId: 'SF-1',   pick: 'a' }, // França
   { participantId: 'jorge-fernandes', gameId: 'SF-2',   pick: 'a' }, // Brasil
 
-  { participantId: 'jorge-fernandes', gameId: 'TP',     pick: 'a' }, // Espanha
   { participantId: 'jorge-fernandes', gameId: 'FINAL',  pick: 'b' }, // Brasil
 
 ];

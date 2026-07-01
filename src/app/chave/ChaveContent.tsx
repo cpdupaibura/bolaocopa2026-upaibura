@@ -162,7 +162,6 @@ function BracketNode({
     qf: `Qrt.${game.id.replace('QF-', '')}`,
     sf: `Semi ${game.id.replace('SF-', '')}`,
     final: 'Final',
-    tp: '3º',
   };
 
   if (game.round === 'r16') {
@@ -264,7 +263,6 @@ export default function ChaveContent() {
   const semi1 = KNOCKOUT_GAMES_BY_ID['SF-1'];
   const semi2 = KNOCKOUT_GAMES_BY_ID['SF-2'];
   const final = KNOCKOUT_GAMES_BY_ID['FINAL'];
-  const tp = KNOCKOUT_GAMES_BY_ID['TP'];
 
   const selectedName = selectedId
     ? KNOCKOUT_PARTICIPANTS.find((p) => p.id === selectedId)?.name.split(' ')[0]
@@ -363,19 +361,6 @@ export default function ChaveContent() {
               />
             </div>
           </div>
-        </section>
-
-        {/* ── 3º LUGAR ── */}
-        <section>
-          <p className="text-slate-600 text-[10px] uppercase tracking-widest font-semibold mb-2">
-            Terceiro lugar · 18 de julho · 18h
-          </p>
-          <BracketCard
-            game={tp}
-            bets={betsMap}
-            results={KNOCKOUT_RESULTS}
-            label="🥉 3º Lugar"
-          />
         </section>
       </div>
     </div>

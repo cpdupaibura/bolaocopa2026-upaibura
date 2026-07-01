@@ -369,15 +369,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* Terceiro lugar */}
-          <div className="mt-2">
-            <p className="text-slate-600 text-[10px] uppercase tracking-widest mb-2 font-semibold">Terceiro lugar</p>
-            <BracketGameCard
-              game={KNOCKOUT_GAMES_BY_ID['TP']}
-              label="🥉 3º Lugar · 18/07 18h"
-            />
-          </div>
         </section>
       </div>
     </div>

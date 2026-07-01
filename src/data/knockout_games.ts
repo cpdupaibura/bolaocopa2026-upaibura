@@ -7,7 +7,6 @@ import { KnockoutGame } from '../lib/types';
  * OF:  Oitavas de final (8 jogos)
  * QF:  Quartas de final (4 jogos)
  * SF: Semifinais (2 jogos)
- * TP:  Terceiro lugar
  * FINAL
  *
  * Para apostar:
@@ -69,9 +68,6 @@ export const KNOCKOUT_GAMES: KnockoutGame[] = [
   { id: 'SF-1', round: 'sf', date: '2026-07-14', time: '16h00', homeSource: 'QF-1', awaySource: 'QF-2', homeLabel: 'Venc. Quartas 1', awayLabel: 'Venc. Quartas 2' },
   { id: 'SF-2', round: 'sf', date: '2026-07-15', time: '16h00', homeSource: 'QF-3', awaySource: 'QF-4', homeLabel: 'Venc. Quartas 3', awayLabel: 'Venc. Quartas 4' },
 
-  // ── TERCEIRO LUGAR ────────────────────────────────────────────────────────
-  { id: 'TP',    round: 'tp',    date: '2026-07-18', time: '18h00', homeSource: 'SF-1', awaySource: 'SF-2', homeLabel: 'Perd. Semifinal 1', awayLabel: 'Perd. Semifinal 2' },
-
   // ── FINAL ─────────────────────────────────────────────────────────────────
   { id: 'FINAL', round: 'final', date: '2026-07-19', time: '16h00', homeSource: 'SF-1', awaySource: 'SF-2', homeLabel: 'Venc. Semifinal 1', awayLabel: 'Venc. Semifinal 2' },
 ];
@@ -84,5 +80,4 @@ export const R16_GAMES    = KNOCKOUT_GAMES.filter((g) => g.round === 'r16');
 export const OF_GAMES     = KNOCKOUT_GAMES.filter((g) => g.round === 'of');
 export const QF_GAMES     = KNOCKOUT_GAMES.filter((g) => g.round === 'qf');
 export const SF_GAMES     = KNOCKOUT_GAMES.filter((g) => g.round === 'sf');
-export const TP_GAME      = KNOCKOUT_GAMES.find((g) => g.round === 'tp')!;
 export const FINAL_GAME   = KNOCKOUT_GAMES.find((g) => g.round === 'final')!;

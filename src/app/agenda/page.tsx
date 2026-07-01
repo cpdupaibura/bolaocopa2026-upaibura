@@ -20,8 +20,7 @@ function gameShortId(game: KnockoutGame): string {
     .replace('OF-', 'Oit.')
     .replace('QF-', 'Qrt.')
     .replace('SF-', 'Semi ')
-    .replace('FINAL', 'Final')
-    .replace('TP', '3º');
+    .replace('FINAL', 'Final');
 }
 
 /** Resolve qual time ocupa um slot (home ou away) num jogo. */
@@ -53,21 +52,6 @@ function slotTeam(
   return slotTeam(sourceGame, winningSide, results);
 }
 
-/** Para o 3º lugar: o slot é o PERDEDOR da semifinal fonte. */
-function tpSlotTeam(
-  semiId: string,
-  results: Record<string, 'a' | 'b'>
-): { flag: string; name: string } {
-  const semiGame = KNOCKOUT_GAMES_BY_ID[semiId];
-  const semiResult = results[semiId];
-  if (!semiResult || !semiGame) {
-    return { flag: '', name: semiId === 'SF-1' ? 'Perd. Semifinal 1' : 'Perd. Semifinal 2' };
-  }
-  // Perdedor = o outro lado de quem venceu
-  const losingSide: 'home' | 'away' = semiResult === 'a' ? 'away' : 'home';
-  return slotTeam(semiGame, losingSide, results);
-}
-
 export default function AgendaPage() {
   const results = KNOCKOUT_RESULTS;
   const byDate = new Map<string, KnockoutGame[]>();
@@ -87,16 +71,8 @@ export default function AgendaPage() {
         const result = results[g.id] as 'a' | 'b' | undefined;
         const wonBy: 'home' | 'away' | undefined = result === 'a' ? 'home' : result === 'b' ? 'away' : undefined;
 
-        let home: { flag: string; name: string };
-        let away: { flag: string; name: string };
-
-        if (g.round === 'tp') {
-          home = tpSlotTeam('SF-1', results);
-          away = tpSlotTeam('SF-2', results);
-        } else {
-          home = slotTeam(g, 'home', results);
-          away = slotTeam(g, 'away', results);
-        }
+        const home = slotTeam(g, 'home', results);
+        const away = slotTeam(g, 'away', results);
 
         return {
           id: gameShortId(g),
