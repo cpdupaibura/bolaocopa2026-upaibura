@@ -12,4 +12,6 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'R16-2': 'a',  // França 3x0 Suécia
   'R16-11': 'a',  // México 2x0 Equador
   'R16-12': 'a',  // Inglaterra 2x1 RD Congo (virada)
+  'R16-7': 'a',  // Estados Unidos 2x0 Bósnia
+  'R16-8': 'a',  // Bélgica 3x2 Senegal
 };
