@@ -12,7 +12,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'R16-2': 'a', // França 3x0 Suécia
   'R16-3': 'b', // Canadá 1x0 África do Sul
   'R16-4': 'b', // Marrocos 1x1 Holanda (Marrocos venceu nos pênaltis)
-  // 'R16-5': 'a', // Portugal x Croácia
+  'R16-5': 'a', // Portugal 2x1 Croácia
   'R16-6': 'a', // Espanha 3x0 Áustria
   'R16-7': 'a', // Estados Unidos 2x0 Bósnia
   'R16-8': 'a', // Bélgica 3x2 Senegal
@@ -22,7 +22,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'R16-12': 'a', // Inglaterra 2x1 RD Congo (virada)
   // 'R16-13': 'a', // Argentina x Cabo Verde
   // 'R16-14': 'a', // Austrália x Egito
-  // 'R16-15': 'a', // Suíça x Argélia
+   'R16-15': 'a', // Suíça 2x0 Argélia
   // 'R16-16': 'a', // Colômbia x Gana
 
   // ── Oitavas de final ──────────────────────────────────────────────────────
