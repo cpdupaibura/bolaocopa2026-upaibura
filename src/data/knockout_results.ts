@@ -21,7 +21,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'R16-11': 'a', // México 2x0 Equador
   'R16-12': 'a', // Inglaterra 2x1 RD Congo (virada)
   'R16-13': 'a', // Argentina 3x2 Cabo Verde (prorrogação)
-  'R16-14': 'b', // Austrália 2x4 Egito
+  'R16-14': 'b', // Austrália 2x4 Egito (pênaltis)
   'R16-15': 'a', // Suíça 2x0 Argélia
   'R16-16': 'a', // Colômbia 1x0 Gana
 
