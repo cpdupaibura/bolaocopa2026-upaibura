@@ -27,7 +27,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
 
   // ── Oitavas de final ──────────────────────────────────────────────────────
   // 'OF-1': 'a', // Vencedor Jogo 1 x Vencedor Jogo 2
-  // 'OF-2': 'a', // Vencedor Jogo 3 x Vencedor Jogo 4
+  'OF-2': 'b', // Canadá 0x3 Marrocos
   // 'OF-3': 'a', // Vencedor Jogo 5 x Vencedor Jogo 6
   // 'OF-4': 'a', // Vencedor Jogo 7 x Vencedor Jogo 8
   // 'OF-5': 'a', // Vencedor Jogo 9 x Vencedor Jogo 10
