@@ -26,7 +26,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'R16-16': 'a', // Colômbia 1x0 Gana
 
   // ── Oitavas de final ──────────────────────────────────────────────────────
-  // 'OF-1': 'a', // Vencedor Jogo 1 x Vencedor Jogo 2
+  'OF-1': 'a', // França 1x0 Paraguai
   'OF-2': 'b', // Canadá 0x3 Marrocos
   // 'OF-3': 'a', // Vencedor Jogo 5 x Vencedor Jogo 6
   // 'OF-4': 'a', // Vencedor Jogo 7 x Vencedor Jogo 8
