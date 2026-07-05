@@ -5,8 +5,8 @@ import { TEAMS } from '../data/teams';
 /**
  * Verifica se o apostador acertou o confronto exato do jogo (ambas as seleções corretas).
  * Para R16, o confronto é sempre fixo → sempre verdadeiro.
- * Para OF em diante, o confronto é correto somente se o apostador acertou
- * o resultado E o confronto de CADA jogo-fonte que alimenta este confronto.
+ * Para OF em diante, o confronto é correto quando o apostador acertou
+ * os vencedores dos jogos-fonte que definem esse confronto.
  */
 export function isConfrontoCorrect(
   gameId: string,
@@ -17,15 +17,13 @@ export function isConfrontoCorrect(
   if (!game) return false;
   if (game.round === 'r16') return true;
 
-  const homeSourceId = game.homeSource!;
-  const awaySourceId = game.awaySource!;
+  const betPick = bets[gameId];
+  const actualResult = results[gameId];
+  if (!betPick || !actualResult) return false;
+  if (betPick !== actualResult) return false;
 
-  return (
-    results[homeSourceId] === bets[homeSourceId] &&
-    results[awaySourceId] === bets[awaySourceId] &&
-    isConfrontoCorrect(homeSourceId, bets, results) &&
-    isConfrontoCorrect(awaySourceId, bets, results)
-  );
+  const sourceId = betPick === 'a' ? game.homeSource! : game.awaySource!;
+  return results[sourceId] === bets[sourceId] && isConfrontoCorrect(sourceId, bets, results);
 }
 
 export function calculateKnockoutLeaderboard(
