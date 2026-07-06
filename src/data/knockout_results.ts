@@ -30,8 +30,8 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'OF-2': 'b', // Canadá 0x3 Marrocos
   // 'OF-3': 'a', // Vencedor Jogo 5 x Vencedor Jogo 6
   // 'OF-4': 'a', // Vencedor Jogo 7 x Vencedor Jogo 8
-  // 'OF-5': 'a', // Vencedor Jogo 9 x Vencedor Jogo 10
-  // 'OF-6': 'a', // Vencedor Jogo 11 x Vencedor Jogo 12
+  'OF-5': 'b', // Brasil 1x2 Noruega
+  'OF-6': 'b', // México 2x3 Inglaterra
   // 'OF-7': 'a', // Vencedor Jogo 13 x Vencedor Jogo 14
   // 'OF-8': 'a', // Vencedor Jogo 15 x Vencedor Jogo 16
 
