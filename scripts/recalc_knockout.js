@@ -43,12 +43,15 @@ function isConfrontoCorrect(gameId, betsMap, results, games) {
   const game = games[gameId];
   if (!game) return false;
   if (game.round === 'r16') return true;
-  const h = game.homeSource;
-  const a = game.awaySource;
-  if (!h || !a) return false;
-  if (results[h] === undefined || results[a] === undefined) return false;
-  if (results[h] !== betsMap[h] || results[a] !== betsMap[a]) return false;
-  return isConfrontoCorrect(h, betsMap, results, games) && isConfrontoCorrect(a, betsMap, results, games);
+
+  const betPick = betsMap[gameId];
+  const actualResult = results[gameId];
+  if (betPick === undefined || actualResult === undefined) return false;
+  if (betPick !== actualResult) return false;
+
+  const sourceId = betPick === 'a' ? game.homeSource : game.awaySource;
+  if (!sourceId) return false;
+  return results[sourceId] === betsMap[sourceId] && isConfrontoCorrect(sourceId, betsMap, results, games);
 }
 
 function calc(resultsFile, betsFile, gamesFile) {
