@@ -29,7 +29,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'OF-1': 'b', // Paraguai 0x1 França
   'OF-2': 'b', // Canadá 0x3 Marrocos
   'OF-3': 'b', // Portugal 0x1 Espanha
-  // 'OF-4': 'a', // Vencedor Jogo 7 x Vencedor Jogo 8
+  'OF-4': 'b', // Estados Unidos 1x4 Bélgica
   'OF-5': 'b', // Brasil 1x2 Noruega
   'OF-6': 'b', // México 2x3 Inglaterra
   // 'OF-7': 'a', // Vencedor Jogo 13 x Vencedor Jogo 14
