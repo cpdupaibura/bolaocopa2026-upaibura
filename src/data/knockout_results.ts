@@ -32,8 +32,8 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'OF-4': 'b', // Estados Unidos 1x4 Bélgica
   'OF-5': 'b', // Brasil 1x2 Noruega
   'OF-6': 'b', // México 2x3 Inglaterra
-  // 'OF-7': 'a', // Vencedor Jogo 13 x Vencedor Jogo 14
-  // 'OF-8': 'a', // Vencedor Jogo 15 x Vencedor Jogo 16
+  'OF-7': 'a', // Argentina 3x2 Egito
+  'OF-8': 'a', // Suíça 1x1 Colômbia (4x3 nos pênaltis)
 
   // ── Quartas de final ──────────────────────────────────────────────────────
   // 'QF-1': 'a', // Vencedor Oitavas 1 x Vencedor Oitavas 2
