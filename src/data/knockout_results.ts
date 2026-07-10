@@ -37,7 +37,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
 
   // ── Quartas de final ──────────────────────────────────────────────────────
   'QF-1': 'a', // França 2x0 Marrocos
-  // 'QF-2': 'a', // Vencedor Oitavas 3 x Vencedor Oitavas 4
+  'QF-2': 'a', // Espanha 2x1 Bélgica
   // 'QF-3': 'a', // Vencedor Oitavas 5 x Vencedor Oitavas 6
   // 'QF-4': 'a', // Vencedor Oitavas 7 x Vencedor Oitavas 8
 
