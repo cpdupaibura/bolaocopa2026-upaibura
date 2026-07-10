@@ -36,7 +36,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'OF-8': 'a', // Suíça 1x1 Colômbia (4x3 nos pênaltis)
 
   // ── Quartas de final ──────────────────────────────────────────────────────
-  // 'QF-1': 'a', // Vencedor Oitavas 1 x Vencedor Oitavas 2
+  'QF-1': 'a', // França 2x0 Marrocos
   // 'QF-2': 'a', // Vencedor Oitavas 3 x Vencedor Oitavas 4
   // 'QF-3': 'a', // Vencedor Oitavas 5 x Vencedor Oitavas 6
   // 'QF-4': 'a', // Vencedor Oitavas 7 x Vencedor Oitavas 8
