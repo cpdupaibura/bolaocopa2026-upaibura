@@ -38,8 +38,8 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   // ── Quartas de final ──────────────────────────────────────────────────────
   'QF-1': 'a', // França 2x0 Marrocos
   'QF-2': 'a', // Espanha 2x1 Bélgica
-  // 'QF-3': 'a', // Vencedor Oitavas 5 x Vencedor Oitavas 6
-  // 'QF-4': 'a', // Vencedor Oitavas 7 x Vencedor Oitavas 8
+  'QF-3': 'b', // Noruega 1x2 Inglaterra (prorrogação)
+  'QF-4': 'a', // Argentina 3x1 Suíça (prorrogação)
 
   // ── Semifinais ────────────────────────────────────────────────────────────
   // 'SF-1': 'a', // Vencedor Quartas 1 x Vencedor Quartas 2
