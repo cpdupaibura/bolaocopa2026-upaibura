@@ -42,7 +42,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'QF-4': 'a', // Argentina 3x1 Suíça (prorrogação)
 
   // ── Semifinais ────────────────────────────────────────────────────────────
-  // 'SF-1': 'a', // Vencedor Quartas 1 x Vencedor Quartas 2
+  'SF-1': 'a', // França 0x2 Espanha
   // 'SF-2': 'a', // Vencedor Quartas 3 x Vencedor Quartas 4
 
   // ── Final ─────────────────────────────────────────────────────────────────
