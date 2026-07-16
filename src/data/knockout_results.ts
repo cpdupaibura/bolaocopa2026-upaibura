@@ -43,7 +43,7 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
 
   // ── Semifinais ────────────────────────────────────────────────────────────
   'SF-1': 'b', // França 0x2 Espanha
-  // 'SF-2': 'a', // Vencedor Quartas 3 x Vencedor Quartas 4
+  'SF-2': 'a', // Inglaterra 1x2 Argentina
 
   // ── Final ─────────────────────────────────────────────────────────────────
   'FINAL': 'b', // Espanha finalista
