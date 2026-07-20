@@ -46,5 +46,5 @@ export const KNOCKOUT_RESULTS: Record<string, 'a' | 'b'> = {
   'SF-2': 'b', // Inglaterra 1x2 Argentina
 
   // ── Final ─────────────────────────────────────────────────────────────────
-  // 'FINAL': 'a', // Espanha x Argentina
+  'FINAL': 'a', // Espanha 1x0 Argentina
 };
